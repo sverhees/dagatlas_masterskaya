@@ -1,0 +1,17 @@
+
+---
+title: "Useful links"
+output:
+  html_document:
+    fig_cap: yes
+    highlight: tango
+    smooth_scroll: no
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+* [Typological Atlas of the Languages of Daghestan](https://timtim1342.github.io)
+

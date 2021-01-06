@@ -1,0 +1,358 @@
+
+---
+title: "Philosophy"
+output:
+  html_document:
+    fig_cap: yes
+    highlight: tango
+    smooth_scroll: no
+    theme: cosmo
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The idea of the [Typological Atlas of Daghestan]() was to create a [WALS]()-style resource for the languages of Daghestan and their neighbors. 
+
+[WALS]() assigns one value for each linguistic feature to a language, which corresponds to one datapoint on the map.
+
+In the initial approach of [TALD](), one value was assigned to each language based on a representative doculect. This information was then extrapolated to all villages where the language is spoken.
+
+Below are two possible visualizations for the same dummy feature: the initial consonant of various cognates meaning 'bridge'.
+
+|language|feature|value|form|
+|--------|-------|-----|----|
+|Avar    |Initial consonant of 'bridge'|ƛ'|ƛ'o|
+|Khvarshi|Initial consonant of 'bridge'|t'|t'eru|
+|Karata  |Initial consonant of 'bridge'|ƛ'|ƛ'eru|
+
+```{r, echo=FALSE,out.width="49%", out.height="20%",fig.cap="Generalized vs. extrapolated visualization",fig.show='hold',fig.align='center'}
+
+knitr::include_graphics(c("images/walsex.png","images/taldex.png"))
+``` 
+
+A benefit of the [TALD]() approach is that it shows the boundaries and size of language communities more accurately. A drawback is that it leads to gross overgeneralization and erases dialectal differences. 
+
+All of the Avar villages, for example, are colored according to data on the Standard language, while we know that 'bridge' in the Zaqatala dialect spoken in Northern Azerbaijan is pronounced *kːjo*. These villages should thus have a different value.
+
+# Current approach
+
+To improve the accuracy of our visualizations, we currently collect all attested values for a given feature, taking into account any idiom we have data on, including standard languages, dialects spoken in multiple villages and single-village idioms. 
+
+The visualization shows the most accurate level of granularity available for each village.
+
+For example, the Andi language is spoken in 17 villages. 8 of these have no dialect classification. The remaining 9 villages each have a specific village idiom, which are grouped into Upper Andi and Lower Andi.
+
+Let's say that for a straight-forward feature like **Number of noun classes**, we have general data on both the Upper and Lower dialects, and more accurate information on several villages from the Upper dialect group. One of these villages (Rikvani) even has a value that differs from the other varieties we have data for.
+
+The table below summarizes the different values observed for the language (the number of noun classes is indicated between brackets).
+
+|Language|Toplevel dialect|Village|
+|--------|----------------|-------|
+|Andi <span style="color:Firebrick">●</span> (5)  |Upper Andi <span style="color:Firebrick">●</span>  (5)    |Rikvani <span style="color:Thistle">●</span> (6)|
+|        |Lower Andi <span style="color:MistyRose">●</span> (3)    |       |
+
+The diagram below shows the dialect grouping of Andi villages and their values for the noun class feature. In the center is the language itself, which is colored according to the value of the Upper group and the eponymous village dialect of Andi, which are most representative for the language as a whole.
+
+```{r, echo=FALSE}
+
+library(DiagrammeR)
+
+DiagrammeR::grViz("digraph {
+  
+graph[layout = neato, rankdir = LR]
+
+node [fontsize = 14,
+      shape = oval, 
+      style = filled, 
+      fillcolor = Firebrick, 
+      fontcolor = white,
+      color = Firebrick]
+        
+# language      
+      Andi
+
+node [fontsize = 10]
+
+# dialects
+      Upper
+      
+node [shape = oval, 
+      style = filled, 
+      fillcolor = WhiteSmoke, 
+      fontcolor = black,
+      color = WhiteSmoke]
+      Other
+      
+node [shape = oval, 
+      style = filled, 
+      fillcolor = MistyRose, 
+      fontcolor = black,
+      color = MistyRose]
+      
+      Lower
+
+# Andi-Upper-Villages
+
+node [fontsize = 8,
+      shape = oval,
+      style = filled, 
+      fillcolor = Firebrick, 
+      fontcolor = white,
+      color = Firebrick]
+Chanko
+Zilo
+Ashali
+Andiv [label = 'Andi']
+Gunkha
+Gagatli
+
+# Rikvani
+
+node [shape = oval,
+      style = filled, 
+      fillcolor = Thistle, 
+      fontcolor = black,
+      color = Thistle]
+Rikvani
+
+# Lower villages
+
+node [shape = oval, 
+      style = filled, 
+      fillcolor = MistyRose, 
+      fontcolor = black,
+      color = MistyRose]
+
+Kvankhidatli
+Muni
+
+# Other villages
+
+node [shape = oval, 
+      style = filled, 
+      fillcolor = WhiteSmoke, 
+      fontcolor = black,
+      color = WhiteSmoke]
+Mekheturi
+Shivor
+Khando
+Rushukha
+Novogagatli
+Aytkhan
+Dzhugut
+Tsibilta
+
+edge [color = black, arrowhead = none]
+
+Andi -> {Other, Upper, Lower}
+
+Other -> {Mekheturi, Shivor, Rushukha, Khando, Tsibilta, Novogagatli, Aytkhan, Dzhugut}
+Upper -> {Andiv, Rikvani, Gagatli, Zilo, Ashali, Chanko, Gunkha} 
+Lower -> {Muni, Kvankhidatli}
+    
+}")
+
+
+```
+
+# Map visualization{.tabset .tabset-fade .tabset-pills}
+
+On the map, the unclassified villages will be colored according to the general language information. A map visualization of the feature would thus look as follows:
+
+1. **Language and feature** shows the basic TALD visualization, where the inner dot is colored according to language, and the color of the outer dot shows the value for the linguistic feature.
+2. **Feature and granularity** shows the distribution of the feature and the accuracy (=granularity) of the information for each datapoint.
+3. **Toggle granularity** allows the user to show only certain levels of accuracy.
+
+<span style="color:Firebrick">
+В итоге, наверно, нужны только 1 и 3, если 3 бы сработала как надо. Хотим ли сохранить версию карт, на которой только одно наблодение - один язык - одна карта?
+</span>
+
+You can click on a datapoint to view the name of the language (with a link to the [Glottolog](https://glottolog.org) database), the village, the granularity of data used to color this datapoint, and the value.
+
+```{r, echo=FALSE, message=FALSE}
+
+# packages
+
+library(tidyverse)
+library(lingtypology)
+
+# load data
+
+feature <- read_tsv("dummy_data/dummy_feature.csv")
+villages <- read_tsv("dummy_data/dummy_villages.csv")
+
+# remove data not for mapping
+
+feature <- feature[(feature$map == "yes"),]
+
+# split feature data into dialect levels
+
+feature_group <- feature %>%
+  group_by(type) %>%
+  group_split()
+
+feature_tl <- data.frame(feature_group[[1]])
+feature_v <- data.frame(feature_group[[2]])
+
+feature_tl$granularity <- "toplevel dialect"
+feature_v$granularity <- "village dialect"
+
+# merge feature data with villages dataset
+
+## create matching columns
+
+colnames(feature_tl)[colnames(feature_tl) == "idiom"] <- "toplevel_dialect"
+colnames(feature_v)[colnames(feature_v) == "idiom"] <- "village_dialect"
+
+## toplevel dialect data
+
+tlevel_villages <- merge(villages, feature_tl, by = "toplevel_dialect")
+v_villages <- merge(villages, feature_v, by = "village_dialect")
+
+# [this generates a lot of garbage columns]
+
+## combine dialect data of different granularity
+
+dialect_villages <- full_join(v_villages, tlevel_villages, by = "village")
+
+# [not very convenient, data from different datasets is in different columns]
+
+## do a simple rbind instead
+
+dialect_villages2 <- rbind(v_villages, tlevel_villages)
+
+dialect_villages3 <- dialect_villages2[!duplicated(dialect_villages2$village),]
+
+# [this gives the desired result, but it's cumbersome and will fail 
+# if we happen to have multiple villages with the same name in our set]
+
+# IMPORTANT: SETS SHOULD BE MERGED IN THE RIGHT ORDER (HIGH GRAN - LOW GRAN)
+# SO THAT THE DUPLICATES WITH THE HIGHEST GRANULARITY ARE KEPT
+
+## and now for the villages for which we have no data
+
+# [*adds column for villages that lack a dialect affiliation*]
+
+### isolate general language data
+
+feature_l <- feature %>%
+  filter(genlang_point == "yes") %>%
+  mutate(granularity = "language") %>%
+  mutate(default_level = lang) %>%
+  select(-idiom)
+
+### create a set of unaffiliated villages
+
+#lost_villages <- villages[villages$default_level == "yes",]
+
+### make them match
+
+### merge feature data and village set
+
+lang_villages <- merge(villages, feature_l, by = "default_level")
+
+### add to the refined set
+
+alldata <- full_join(dialect_villages3, lang_villages, by = "village")
+
+### и еще раз волшебный rbind
+
+alldata2 <- rbind(dialect_villages3, lang_villages)
+alldata3 <- alldata2[!duplicated(alldata2$village),]
+
+```
+
+## 1. Language and feature
+
+```{r, echo=FALSE, message=FALSE}
+
+map.feature(alldata3$lang.x,
+            latitude = alldata3$lat,
+            longitude = alldata3$lon,
+            features = alldata3$lang.x,
+            color = "#003366",
+            title = "Language",
+            label = alldata3$village,
+            stroke.features = as.factor(alldata3$value),
+            stroke.color = c("MistyRose", "Firebrick", "Thistle"),
+            stroke.title = alldata3$feature[1],
+            popup = paste("<b>Village:</b>", alldata3$village, "<br>",
+                          "<b>Data:</b>", alldata3$granularity, "<br>",
+                          "<b>Value:</b>", alldata3$value),
+            zoom.control = T)
+
+```
+
+## 2. Feature and granularity
+
+```{r, echo=FALSE, message=FALSE}
+
+# единсвтенное, мне хотелось бы, чтобы можно было посмотреть в popup еще и название идиома рядом с его левелом, например: Upper, toplevel dialect, но не знаю как это реализовать
+
+map.feature(alldata3$lang.x,
+            latitude = alldata3$lat,
+            longitude = alldata3$lon,
+            features = as.factor(alldata3$value),
+            color = c("MistyRose", "Firebrick", "Thistle"),
+            title = alldata3$feature[1],
+            label = alldata3$village,
+            stroke.features = alldata3$granularity,
+            stroke.color = c("white", "grey", "black"),
+            stroke.title = "Data granularity",
+            popup = paste("<b>Village:</b>", alldata3$village, "<br>",
+                          "<b>Data:</b>", alldata3$granularity, "<br>",
+                          "<b>Value:</b>", alldata3$value),
+            zoom.control = T)
+
+```
+
+## 3. Toggle granularity
+
+```{r, echo=FALSE, message=FALSE}
+
+# То есть, тут нужно, чтобы карта показаывала только features = value, 
+# но чтобы убиралка работала по столбцу granularity, и у меня не получается!
+
+map.feature(alldata3$lang.x,
+            latitude = alldata3$lat,
+            longitude = alldata3$lon,
+            features = alldata3$granularity,
+            color = c("grey", "white", "black"),
+            label = alldata3$village,
+            stroke.features = alldata3$value,
+            stroke.color = c("MistyRose", "Firebrick", "Thistle"),
+            stroke.title = alldata3$feature[1],
+            control = T,
+            popup = paste("<b>Village:</b>", alldata3$village, "<br>",
+                          "<b>Data:</b>", alldata3$granularity, "<br>",
+                          "<b>Value:</b>", alldata3$value),
+            zoom.control = T)
+
+```
+
+Our coverage is far from sufficient, because we do not have data for many dialects, and we don't know the dialect affiliation of a large number of villages in the area.
+
+We compensate for this shortcoming by encoding the level of accuracy/granularity for each datapoint, and allowing the user to toggle which data to display.
+
+Ideally, our datasets will be updated when new information becomes available.
+
+# The villages dataset
+
+Visualizations are created by combining datasets on linguistic features with [The East Caucasian villages dataset](https://github.com/sverhees/master_villages): a dataset that contains a list of villages in the eastern Caucasus, their coordinates, and the language spoken there.
+
+The atlas uses its own version of the dataset, with some columns lacking and others added. Get the latest version of the original dataset using the link above. 
+
+<span style="color:Firebrick">
+Это нужно потому что для мердж датасэтов мне пришлось добавить в villages столбец default_level, где дублируется язык для тех сел, у которых нет диалектной принадлежности. Это чисто технический столбец, который не нужен другим пользователям датасэта с селами.
+</span>
+
+# Northeastern Daghestan
+
+The northeastern part of Daghestan was settled only relatively recently, and is much more ethnically mixed than the rest of the area, as you can see on [these maps](https://sverhees.github.io/master_villages/sample_maps.html). In addition, little to nothing is known about the variants of the languages spoken there. In some cases we know the village of origin for most of its inhabitants (e.g. Novogagatli was founded by settlers from the Andi village Gagatli), but we don't know how well their dialect is preserved, and to what extent their population is ethnically and linguistically homogeneous. Therefore, we decided to exclude this region from our visualizations.
+
+
+

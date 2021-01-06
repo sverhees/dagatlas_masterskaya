@@ -1,0 +1,19 @@
+
+name: "TALD Contributor Manual"
+navbar:
+  title: "TALD Contributor Manual"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Philosophy"
+      href: philosophy.html
+    - text: "Feature datasets"
+      href: datasets.html
+    - text: "Writing a chapter"
+      href: chapters.html
+    - text: "Map visualization"
+      href: maps.html
+    - text: "Useful links"
+      href: links.html
+
+

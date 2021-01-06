@@ -1,0 +1,23 @@
+
+---
+title: "Map visualization"
+output:
+  html_document:
+    fig_cap: yes
+    highlight: tango
+    smooth_scroll: no
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Maps in [TALD](https://timtim1342.github.io/index.html) are generated automatically based on the **value** column. As explained in [Feature datasets](), you can have multiple value columns in order to generate different maps. 
+
+If you want, you can experiment with map visualizations by yourself using the `lingtypology` package for R. You can find a detailed tutorial for the package [here](https://ropensci.github.io/lingtypology/).
+
+The underlying code and data used for the maps in [TALD](https://timtim1342.github.io/index.html) can be viewed in the Github repository for the Atlas.
+
+
+

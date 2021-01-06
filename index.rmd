@@ -1,0 +1,23 @@
+
+---
+title: "Introduction"
+output:
+  html_document:
+    fig_cap: yes
+    highlight: tango
+    smooth_scroll: no
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Updated: `r Sys.Date()`
+
+Welcome to the **Contributor Manual for the [Typological Atlas of the Languages of Daghestan (TALD)](https://timtim1342.github.io/index.html)**!
+
+Here you will find basic instructions for collecting a feature dataset for the Atlas, writing and formatting an accompanying chapter, and creating map visualizations.
+
+The manual also introduces the underlying philosophy of the project and the structure of the data.
+
