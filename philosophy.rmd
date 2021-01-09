@@ -44,9 +44,9 @@ To improve the accuracy of our visualizations, we currently collect all attested
 
 The visualization shows the most accurate level of granularity available for each village.
 
-For example, the Andi language is spoken in 17 villages. 8 of these have no dialect classification. The remaining 9 villages each have a specific village idiom, which are grouped into Upper Andi and Lower Andi.
+For example, the Andi language is spoken in 17 villages. 8 of these have no dialect classification. The remaining 9 villages each have their own village idiom, which can be divided into two groups: Upper Andi and Lower Andi.
 
-Let's say that for a straight-forward feature like **Number of noun classes**, we have general data on both the Upper and Lower dialects, and more accurate information on several villages from the Upper dialect group. One of these villages (Rikvani) even has a value that differs from the other varieties we have data for.
+Now let us look at a relatively straightforward feature like **Number of noun classes**, for which we have general data on both the Upper and Lower dialects, and more accurate information on several villages from the Upper group. One of these villages (Rikvani) even has a value that differs from the other varieties we have data for.
 
 The table below summarizes the different values observed for the language (the number of noun classes is indicated between brackets).
 
@@ -163,13 +163,9 @@ Lower -> {Muni, Kvankhidatli}
 
 On the map, the unclassified villages will be colored according to the general language information. A map visualization of the feature would thus look as follows:
 
-1. **Language and feature** shows the basic TALD visualization, where the inner dot is colored according to language, and the color of the outer dot shows the value for the linguistic feature.
-2. **Feature and granularity** shows the distribution of the feature and the accuracy (=granularity) of the information for each datapoint.
-3. **Toggle granularity** allows the user to show only certain levels of accuracy.
-
-<span style="color:Firebrick">
-В итоге, наверно, нужны только 1 и 3, если 3 бы сработала как надо. Хотим ли сохранить версию карт, на которой только одно наблодение - один язык - одна карта?
-</span>
+1. **Language and feature** shows the basic TALD visualization, where the inner dot is colored according to the language, and the color of the outer dot shows the value for the linguistic feature.
+2. **Data granularity** allows the user to show only certain levels of data accuracy for the feature.
+3. **General map** displays one datapoint for each language in the sample.
 
 You can click on a datapoint to view the name of the language (with a link to the [Glottolog](https://glottolog.org) database), the village, the granularity of data used to color this datapoint, and the value.
 
@@ -287,7 +283,7 @@ map.feature(alldata3$lang.x,
 
 ```
 
-## 2. Feature and granularity
+## 2. Data granularity
 
 ```{r, echo=FALSE, message=FALSE}
 
@@ -298,11 +294,11 @@ map.feature(alldata3$lang.x,
             longitude = alldata3$lon,
             features = as.factor(alldata3$value),
             color = c("MistyRose", "Firebrick", "Thistle"),
+            width = 10,
             title = alldata3$feature[1],
+            legend.position = "bottomleft",
             label = alldata3$village,
-            stroke.features = alldata3$granularity,
-            stroke.color = c("white", "grey", "black"),
-            stroke.title = "Data granularity",
+            control = alldata3$granularity,
             popup = paste("<b>Village:</b>", alldata3$village, "<br>",
                           "<b>Data:</b>", alldata3$granularity, "<br>",
                           "<b>Value:</b>", alldata3$value),
@@ -310,31 +306,25 @@ map.feature(alldata3$lang.x,
 
 ```
 
-## 3. Toggle granularity
+## 3. General map
 
 ```{r, echo=FALSE, message=FALSE}
 
-# То есть, тут нужно, чтобы карта показаывала только features = value, 
-# но чтобы убиралка работала по столбцу granularity, и у меня не получается!
-
-map.feature(alldata3$lang.x,
-            latitude = alldata3$lat,
-            longitude = alldata3$lon,
-            features = alldata3$granularity,
-            color = c("grey", "white", "black"),
-            label = alldata3$village,
-            stroke.features = alldata3$value,
+map.feature(feature_l$lang,
+            features = feature_l$lang,
+            color = "#003366",
+            title = "Language",
+            label = feature_l$lang,
+            stroke.features = as.factor(feature_l$value),
             stroke.color = c("MistyRose", "Firebrick", "Thistle"),
-            stroke.title = alldata3$feature[1],
-            control = T,
-            popup = paste("<b>Village:</b>", alldata3$village, "<br>",
-                          "<b>Data:</b>", alldata3$granularity, "<br>",
-                          "<b>Value:</b>", alldata3$value),
-            zoom.control = T)
+            stroke.title = feature_l$feature[1],
+            zoom.control = T,
+            zoom.level = 7)
 
 ```
 
-Our coverage is far from sufficient, because we do not have data for many dialects, and we don't know the dialect affiliation of a large number of villages in the area.
+
+Our coverage is far from sufficient, because we do not have data for many dialects, and we do not know the dialect affiliation of a large number of villages in the area.
 
 We compensate for this shortcoming by encoding the level of accuracy/granularity for each datapoint, and allowing the user to toggle which data to display.
 
@@ -342,17 +332,13 @@ Ideally, our datasets will be updated when new information becomes available.
 
 # The villages dataset
 
-Visualizations are created by combining datasets on linguistic features with [The East Caucasian villages dataset](https://github.com/sverhees/master_villages): a dataset that contains a list of villages in the eastern Caucasus, their coordinates, and the language spoken there.
+Visualizations are created by combining datasets on linguistic features with [The East Caucasian villages dataset](https://github.com/sverhees/master_villages): a dataset that contains a list of villages in the eastern Caucasus, their coordinates, and the languages spoken there.
 
-The atlas uses its own version of the dataset, with some columns lacking and others added. Get the latest version of the original dataset using the link above. 
-
-<span style="color:Firebrick">
-Это нужно потому что для мердж датасэтов мне пришлось добавить в villages столбец default_level, где дублируется язык для тех сел, у которых нет диалектной принадлежности. Это чисто технический столбец, который не нужен другим пользователям датасэта с селами.
-</span>
+The atlas uses its own version of the dataset. Get the latest version of the original dataset using the link above.
 
 # Northeastern Daghestan
 
-The northeastern part of Daghestan was settled only relatively recently, and is much more ethnically mixed than the rest of the area, as you can see on [these maps](https://sverhees.github.io/master_villages/sample_maps.html). In addition, little to nothing is known about the variants of the languages spoken there. In some cases we know the village of origin for most of its inhabitants (e.g. Novogagatli was founded by settlers from the Andi village Gagatli), but we don't know how well their dialect is preserved, and to what extent their population is ethnically and linguistically homogeneous. Therefore, we decided to exclude this region from our visualizations.
+The northeastern part of Daghestan was settled only relatively recently, and is much more ethnically mixed than the rest of the area, as you can see on [these maps](https://sverhees.github.io/master_villages/sample_maps.html). In addition, little to nothing is known about the varieties of the languages spoken there. In some cases we know the village of origin for most of its inhabitants (e.g. Novogagatli was founded by settlers from the Andi village Gagatli), but we do not know how well their dialect is preserved, and to what extent their population is ethnically and linguistically homogeneous. Therefore, we decided to exclude this region from our visualizations.
 
 
 

@@ -75,7 +75,10 @@ See Section [Literature references](#literature-references) above on how to cite
 
 ## Examples
 
+Examples should contain the number of the example in the text, followed by the name of the language and a reference to the source:
 
+![](images/example.jpg)
 
+Add glosses to the example using regular CAPS, everything else will be formatted automatically.
 
 

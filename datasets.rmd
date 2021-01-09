@@ -31,7 +31,7 @@ Feel free to browse the archive and look at examples of completed feature datase
 * **id** - unique number for each row = observation in your dataset
 * **lang** - language name
 
-* **idiom** - the name of a language variety
+* **idiom** - the name of a language variety; descriptive sources provide information on specific dialects or village varieties of languages, and we aim to be as precise as possible about where our information comes from, in order to draw maximally accurate maps
 * **type** - specifies whether the idiom is a village variety, a dialect spoken in multiple villages, or a standard language; please use our standard names and type classifications
 
 
@@ -39,8 +39,9 @@ Feel free to browse the archive and look at examples of completed feature datase
 For most sources in our archive, you can find the name and type of the idiom in [this table](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing) (sheet: template). Alternatively, you can search for the name and type of a certain idiom in [this database](https://sverhees.github.io/master_villages/sample_maps.html). If you cannot find the idiom referenced in your source, please contact Samira. 
 See also [Idioms]().
 
-* <span style="color:Firebrick">**genlang_point**</span> - for each language we need one general value which can be used to color datapoints for which we have no data. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to *yes* (one per language), and set everything else to *no*
-* <span style="color:Firebrick">**map**</span> - in some cases there are multiple observations for one idiom. On the map we can show only one value per datapoint, so you can use this column to set information you want to see on the map to *yes* and everything else to *no*
+* **genlang_point** - for each language we need one general value which can be used to color datapoints for which we have no data. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to *yes* (one per language), and set everything else to *no*; see also [Philosophy - Current approach](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach).
+* **map** - in some cases there are multiple observations for one idiom. On the map we can show only one value per datapoint, so you can use this column to set information you want to see on the map to *yes* and everything else to *no*
+
 
 * **feature** - the name of your feature / chapter
 * **value** - the relevant values of the feature (e.g. attested / not attested)
@@ -84,11 +85,12 @@ For help transliterating Cyrillic orthography, see [this file](https://drive.goo
 # Examples
 
 1. Enter the example sentence/phrase/word as it is represented in the source (copy it or insert a screenshot) (**example_as_in_source**)
-2. Add Caucasiologist transcription and insert morpheme boundaries (**example**)
-3. Enter the translation as in the source (**translation_as_in_source**)
-4. If applicable: enter the glosses from the source (**gloss_source**)
-4. Add an interlinear translation in English and glosses for your feature of interest. If you want to gloss the whole example, go ahead! :) (**gloss**)
-5. Add your own free translation to English if you want; if the source already contains an English translation, copy it here. (**translation**)
+2. Upload the screenshot as an image to a [separate folder](https://drive.google.com/drive/folders/10o1MoCECtCGhDcpTRmDH4nJRG1fwgkeH?usp=sharing) in your feature folder in the archive
+3. Add Caucasiologist transcription and insert morpheme boundaries (**example**)
+4. Enter the translation as in the source (**translation_as_in_source**)
+5. If applicable: enter the glosses from the source (**gloss_source**)
+6. Add an interlinear translation in English and glosses for your feature of interest. If you want to gloss the whole example, go ahead! :) (**gloss**)
+7. Add your own free translation to English if you want; if the source already contains an English translation, copy it here. (**translation**)
 
 # Literature references
 
@@ -115,7 +117,7 @@ In the example above, pages 221 and 234-239 from `khalilova2009` have relevant i
 
 ## Adding new literature
 
-If the resource is not in the database yet, you will have to add it. 
+If the source is not in the database yet, you will have to add it. 
 
 The literature database is essentially a list of references in [bibtex](https://en.wikipedia.org/wiki/BibTeX) format. The category of the resource (book, paper, etc.) determines which columns are mandatory. You can see an overview of categories (entry types) and their arguments [here](https://www.bibtex.com/e/entry-types/).
 
@@ -134,8 +136,6 @@ Be sure to complete the following steps when adding new sources:
 1. Assign a `Bibtexkey` to your source.
 2. Enter all the necessary information about the source in the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing).
 3. Upload a copy of the source to the [archive](https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing).
-
-
 
 
 

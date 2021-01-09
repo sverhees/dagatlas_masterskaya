@@ -377,14 +377,14 @@ div.tocify {
 <p>In order to work on the Atlas, you will need access to our <a href="https://drive.google.com/drive/folders/1qN3TpzX-wTxiX2ZX0ZNJ6SledqzLHE5W">drive</a>. If you do not have it already, please write to Chiara or Samira.</p>
 <p>You can find a dataset template <a href="https://docs.google.com/spreadsheets/d/1ptIOqpr6PMLdMv0QOLShO_bvQMmYz_88q4My7rC9wY0/edit?usp=sharing">here</a>.</p>
 <p>Create a folder for your feature in the <a href="https://drive.google.com/drive/folders/1Rrm0NOH2E7dGMC97TdCFhjg7Y_FrAU3i?usp=sharing">archive</a> and upload your datatable, even if it is still a work in progress. This makes it easier to discuss any problems or questions you might have.</p>
-<p>Below the function of each column is explained.</p>
+<p>Below, the function of each column is explained.</p>
 <p>Feel free to browse the archive and look at examples of completed feature datasets, for example <a href="https://docs.google.com/spreadsheets/d/1EO_EdjBMZb5wXVpF4-ps89tKCY3lZ0Dfo55HP_U6EXY/edit?usp=sharing">Standard of comparison</a>.</p>
 <div id="list-of-columns" class="section level1">
 <h1>List of columns</h1>
 <ul>
 <li><strong>id</strong> - unique number for each row = observation in your dataset</li>
 <li><p><strong>lang</strong> - language name</p></li>
-<li><strong>idiom</strong> - the name of a language variety</li>
+<li><strong>idiom</strong> - the name of a language variety; descriptive sources provide information on specific dialects or village varieties of languages, and we aim to be as precise as possible about where our information comes from, in order to draw maximally accurate maps</li>
 <li><p><strong>type</strong> - specifies whether the idiom is a village variety, a dialect spoken in multiple villages, or a standard language; please use our standard names and type classifications</p></li>
 </ul>
 <blockquote>
@@ -392,8 +392,8 @@ div.tocify {
 <p>For most sources in our archive, you can find the name and type of the idiom in <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">this table</a> (sheet: template). Alternatively, you can search for the name and type of a certain idiom in <a href="https://sverhees.github.io/master_villages/sample_maps.html">this database</a>. If you cannot find the idiom referenced in your source, please contact Samira. See also <a href="">Idioms</a>.</p>
 </blockquote>
 <ul>
-<li><span style="color:Firebrick"><strong>genlang_point</strong></span> - for each language we need one general value which can be used to color datapoints for which we have no data. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to <em>yes</em> (one per language), and set everything else to <em>no</em></li>
-<li><p><span style="color:Firebrick"><strong>map</strong></span> - in some cases there are multiple observations for one idiom. On the map we can show only one value per datapoint, so you can use this column to set information you want to see on the map to <em>yes</em> and everything else to <em>no</em></p></li>
+<li><strong>genlang_point</strong> - for each language we need one general value which can be used to color datapoints for which we have no data. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to <em>yes</em> (one per language), and set everything else to <em>no</em>; see also <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach">Philosophy - Current approach</a>.</li>
+<li><p><strong>map</strong> - in some cases there are multiple observations for one idiom. On the map we can show only one value per datapoint, so you can use this column to set information you want to see on the map to <em>yes</em> and everything else to <em>no</em></p></li>
 <li><strong>feature</strong> - the name of your feature / chapter</li>
 <li><p><strong>value</strong> - the relevant values of the feature (e.g. attested / not attested)</p></li>
 </ul>
@@ -454,6 +454,7 @@ div.tocify {
 <h1>Examples</h1>
 <ol style="list-style-type: decimal">
 <li>Enter the example sentence/phrase/word as it is represented in the source (copy it or insert a screenshot) (<strong>example_as_in_source</strong>)</li>
+<li>Upload the screenshot as an image to a <a href="https://drive.google.com/drive/folders/10o1MoCECtCGhDcpTRmDH4nJRG1fwgkeH?usp=sharing">separate folder</a> in your feature folder in the archive</li>
 <li>Add Caucasiologist transcription and insert morpheme boundaries (<strong>example</strong>)</li>
 <li>Enter the translation as in the source (<strong>translation_as_in_source</strong>)</li>
 <li>If applicable: enter the glosses from the source (<strong>gloss_source</strong>)</li>
@@ -487,7 +488,7 @@ div.tocify {
 <p>In the example above, pages 221 and 234-239 from <code>khalilova2009</code> have relevant information about the feature, while the paper <code>khalilova2011</code> was consulted/is relevant in its entirety.</p>
 <div id="adding-new-literature" class="section level2">
 <h2>Adding new literature</h2>
-<p>If the resource is not in the database yet, you will have to add it.</p>
+<p>If the source is not in the database yet, you will have to add it.</p>
 <p>The literature database is essentially a list of references in <a href="https://en.wikipedia.org/wiki/BibTeX">bibtex</a> format. The category of the resource (book, paper, etc.) determines which columns are mandatory. You can see an overview of categories (entry types) and their arguments <a href="https://www.bibtex.com/e/entry-types/">here</a>.</p>
 <blockquote>
 <p>Russian resources are listed in Cyrillics with a translation in English.</p>
