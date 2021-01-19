@@ -15,7 +15,7 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -97,33 +97,33 @@ summary {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 51px;
+  padding-top: 60px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .dropdown-submenu {
   position: relative;
@@ -355,6 +355,9 @@ div.tocify {
   <a href="maps.html">Map visualization</a>
 </li>
 <li>
+  <a href="steps.html">Step-by-step</a>
+</li>
+<li>
   <a href="links.html">Useful links</a>
 </li>
       </ul>
@@ -374,38 +377,47 @@ div.tocify {
 </div>
 
 
-<p>In order to work on the Atlas, you will need access to our <a href="https://drive.google.com/drive/folders/1qN3TpzX-wTxiX2ZX0ZNJ6SledqzLHE5W">drive</a>. If you do not have it already, please write to Chiara or Samira.</p>
-<p>You can find a dataset template <a href="https://docs.google.com/spreadsheets/d/1ptIOqpr6PMLdMv0QOLShO_bvQMmYz_88q4My7rC9wY0/edit?usp=sharing">here</a>.</p>
-<p>Create a folder for your feature in the <a href="https://drive.google.com/drive/folders/1Rrm0NOH2E7dGMC97TdCFhjg7Y_FrAU3i?usp=sharing">archive</a> and upload your datatable, even if it is still a work in progress. This makes it easier to discuss any problems or questions you might have.</p>
-<p>Below, the function of each column is explained.</p>
+<p>Feature datasets for the Atlas are based on descriptive literature.</p>
+<p>To create a dataset you will need the following things:</p>
+<ul>
+<li>Access to our <a href="https://drive.google.com/drive/folders/1qN3TpzX-wTxiX2ZX0ZNJ6SledqzLHE5W">archive</a></li>
+<li>A <a href="https://docs.google.com/spreadsheets/d/1ptIOqpr6PMLdMv0QOLShO_bvQMmYz_88q4My7rC9wY0/edit?usp=sharing">dataset template</a></li>
+<li>Our <a href="">library</a> of descriptive sources</li>
+<li>Our <a href="">literature database</a> with bibliographical information about the sources in the library</li>
+</ul>
+<p>Start by creating a folder for your feature in the archive, and upload your dataset there, even if it is still a work in progress: this makes it easier to discuss any problems or questions you might have.</p>
 <p>Feel free to browse the archive and look at examples of completed feature datasets, for example <a href="https://docs.google.com/spreadsheets/d/1EO_EdjBMZb5wXVpF4-ps89tKCY3lZ0Dfo55HP_U6EXY/edit?usp=sharing">Standard of comparison</a>.</p>
 <div id="list-of-columns" class="section level1">
 <h1>List of columns</h1>
 <ul>
-<li><strong>id</strong> - unique number for each row = observation in your dataset</li>
+<li><strong>id</strong> - unique number for each row = one observation in your dataset</li>
 <li><p><strong>lang</strong> - language name</p></li>
-<li><strong>idiom</strong> - the name of a language variety; descriptive sources provide information on specific dialects or village varieties of languages, and we aim to be as precise as possible about where our information comes from, in order to draw maximally accurate maps</li>
+<li><strong>idiom</strong> - the name of a language variety; descriptive sources provide information on specific dialects or village varieties of languages, and we aim to be as precise as possible about where our information comes from; this also means that if a source says: “in dialect X, the same form is used”, you can add this as an observation to your dataset</li>
 <li><p><strong>type</strong> - specifies whether the idiom is a village variety, a dialect spoken in multiple villages, or a standard language; please use our standard names and type classifications</p></li>
 </ul>
 <blockquote>
-<h3 id="idiom-name-and-type">Idiom name and type</h3>
-<p>For most sources in our archive, you can find the name and type of the idiom in <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">this table</a> (sheet: template). Alternatively, you can search for the name and type of a certain idiom in <a href="https://sverhees.github.io/master_villages/sample_maps.html">this database</a>. If you cannot find the idiom referenced in your source, please contact Samira. See also <a href="">Idioms</a>.</p>
+<p>For most sources in our archive, you can find the name and type of the idiom in <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">this table</a>. Alternatively, you can search for the name and type of a certain idiom in <a href="https://sverhees.github.io/master_villages/sample_maps.html">this database</a>. If you cannot find the idiom referenced in your source, please contact Samira.</p>
 </blockquote>
 <ul>
-<li><strong>genlang_point</strong> - for each language we need one general value which can be used to color datapoints for which we have no data. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to <em>yes</em> (one per language), and set everything else to <em>no</em>; see also <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach">Philosophy - Current approach</a>.</li>
-<li><p><strong>map</strong> - in some cases there are multiple observations for one idiom. On the map we can show only one value per datapoint, so you can use this column to set information you want to see on the map to <em>yes</em> and everything else to <em>no</em></p></li>
-<li><strong>feature</strong> - the name of your feature / chapter</li>
-<li><p><strong>value</strong> - the relevant values of the feature (e.g. attested / not attested)</p></li>
+<li><strong>genlang_point</strong> - for each language we need one general value which can be used to color datapoints for which we have no data. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to <em>yes</em> (one per language), and set everything else to <em>no</em>; see also <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach">Philosophy - Current approach</a></li>
+<li><strong>map</strong> - in some cases there are multiple observations for one idiom. On the map we can show <em>only one value per datapoint</em>, so you can use this column to set information you want to see on the map to <em>yes</em> and everything else to <em>no</em></li>
 </ul>
 <blockquote>
-<p>Maps will be generated based on the <strong>value</strong> column. If you want to show the distribution of multiple parameters, please name your columns <strong>value1</strong>, <strong>value2</strong>, etc.</p>
+<p>One value = one row in the dataset. If you have multiple values for one idiom, create two rows for this idiom, each with a unique id.</p>
+</blockquote>
+<ul>
+<li><strong>feature</strong> - the name of your feature / chapter</li>
+<li><strong>value</strong> - the relevant values of the feature (e.g. attested / not attested)</li>
+</ul>
+<blockquote>
+<p>Maps are generated based on the <strong>value</strong> column. If you want to show the distribution of multiple parameters, please name your columns <strong>value1</strong>, <strong>value2</strong>, etc.</p>
 </blockquote>
 <ul>
 <li><strong>source</strong> - reference to the source you consulted (see <a href="#literature-references">Literature references</a> below)</li>
 <li><strong>page</strong> - relevant page in the source</li>
 <li><strong>comment</strong> - in this column you can “pour out your soul” in the words of G.A. Moroz: add any kind of thought on an observation, its source, etc.</li>
-<li><p><strong>contributor</strong> - your name in English, so we know who did what and how to properly credit their work</p></li>
-<li><strong>form</strong> - if your feature is <a href="https://timtim1342.github.io/affective.html">Affective Case</a> for example, with a value attested / not attested, it might be informative to include the suffixes for different languages</li>
+<li><p><strong>contributor</strong> - your name in English, so we know how to properly credit your work</p></li>
+<li><strong>form</strong> - if your feature is <a href="https://timtim1342.github.io/affective.html">Affective Case</a> for example, which has the values attested / not attested, it might be informative to include the suffixes for different languages</li>
 <li><strong>example_as_in_source</strong> - an example of how the form is used (if applicable)</li>
 <li><strong>example</strong> - example in Caucasiologist transcription with morpheme boundaries</li>
 <li><strong>translation_as_in_source</strong> - original translation of the example</li>
@@ -464,11 +476,9 @@ div.tocify {
 </div>
 <div id="literature-references" class="section level1">
 <h1>Literature references</h1>
-<p>Our database of grammars, dictionaries, and other sources used so far can be found <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">here</a>.</p>
-<p>And here is the <a href="https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing">archive</a> where you can find these resources.</p>
-<p>When you use a reference for your dataset, check if it is already in the <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">database</a>.</p>
-<p>If yes: copy the <code>Bibtexkey</code> of the reference from the <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a> to the column <strong>source</strong> in your dataset.</p>
-<p>In case you used multiple sources for one row / observation, separate the IDs with a semicolon (<strong>;</strong>), and do the same with the page numbers in the adjacent column.</p>
+<p>When you add a reference to your dataset, check if it is already listed in the <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a>. If yes, copy the <code>Bibtexkey</code> of the reference from the database to the <strong>source</strong> column in your table.</p>
+<p>(You can find our <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">library</a> of descriptive sources here.)</p>
+<p>In case you used multiple sources for one row / observation, separate the keys with a semicolon (<strong>;</strong>), and do the same with the page numbers in the adjacent column.</p>
 <p>If you refer to multiple page ranges from one source, separate them with a comma.</p>
 <p>If the entire source was relevant, for example because it was a paper devoted to your topic, or because you read the whole grammar and the feature is not mentioned anywhere, indicate NA in the page column.</p>
 <table>
@@ -491,7 +501,7 @@ div.tocify {
 <p>If the source is not in the database yet, you will have to add it.</p>
 <p>The literature database is essentially a list of references in <a href="https://en.wikipedia.org/wiki/BibTeX">bibtex</a> format. The category of the resource (book, paper, etc.) determines which columns are mandatory. You can see an overview of categories (entry types) and their arguments <a href="https://www.bibtex.com/e/entry-types/">here</a>.</p>
 <blockquote>
-<p>Russian resources are listed in Cyrillics with a translation in English.</p>
+<p>Russian resources are listed in Cyrillic script with a translation in English.</p>
 </blockquote>
 <p>The <code>Bibtexkey</code> is constructed as follows:</p>
 <p><code>khalilova2009</code><br />

@@ -6,7 +6,7 @@ output:
     fig_cap: yes
     highlight: tango
     smooth_scroll: no
-    theme: cosmo
+    theme: flatly
     toc: yes
     toc_float: yes
 ---
@@ -15,45 +15,46 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-In order to work on the Atlas, you will need access to our [drive](https://drive.google.com/drive/folders/1qN3TpzX-wTxiX2ZX0ZNJ6SledqzLHE5W). If you do not have it already, please write to Chiara or Samira.
+Feature datasets for the Atlas are based on descriptive literature.
 
-You can find a dataset template [here](https://docs.google.com/spreadsheets/d/1ptIOqpr6PMLdMv0QOLShO_bvQMmYz_88q4My7rC9wY0/edit?usp=sharing).
+To create a dataset you will need the following things:
 
-Create a folder for your feature in the [archive](https://drive.google.com/drive/folders/1Rrm0NOH2E7dGMC97TdCFhjg7Y_FrAU3i?usp=sharing) and upload your datatable, even if it is still a work in progress. This makes it easier to discuss any problems or questions you might have.
+* Access to our [archive](https://drive.google.com/drive/folders/1qN3TpzX-wTxiX2ZX0ZNJ6SledqzLHE5W)
+* A [dataset template](https://docs.google.com/spreadsheets/d/1ptIOqpr6PMLdMv0QOLShO_bvQMmYz_88q4My7rC9wY0/edit?usp=sharing)
+* Our [library]() of descriptive sources
+* Our [literature database]() with bibliographical information about the sources in the library
 
-Below, the function of each column is explained.
+Start by creating a folder for your feature in the archive, and upload your dataset there, even if it is still a work in progress: this makes it easier to discuss any problems or questions you might have.
 
 Feel free to browse the archive and look at examples of completed feature datasets, for example [Standard of comparison](https://docs.google.com/spreadsheets/d/1EO_EdjBMZb5wXVpF4-ps89tKCY3lZ0Dfo55HP_U6EXY/edit?usp=sharing).
 
 
 # List of columns
 
-* **id** - unique number for each row = observation in your dataset
+* **id** - unique number for each row = one observation in your dataset
 * **lang** - language name
 
-* **idiom** - the name of a language variety; descriptive sources provide information on specific dialects or village varieties of languages, and we aim to be as precise as possible about where our information comes from, in order to draw maximally accurate maps
+* **idiom** - the name of a language variety; descriptive sources provide information on specific dialects or village varieties of languages, and we aim to be as precise as possible about where our information comes from; this also means that if a source says: "in dialect X, the same form is used", you can add this as an observation to your dataset
 * **type** - specifies whether the idiom is a village variety, a dialect spoken in multiple villages, or a standard language; please use our standard names and type classifications
 
+> For most sources in our archive, you can find the name and type of the idiom in [this table](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing). Alternatively, you can search for the name and type of a certain idiom in [this database](https://sverhees.github.io/master_villages/sample_maps.html). If you cannot find the idiom referenced in your source, please contact Samira.
 
-> ### Idiom name and type
-For most sources in our archive, you can find the name and type of the idiom in [this table](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing) (sheet: template). Alternatively, you can search for the name and type of a certain idiom in [this database](https://sverhees.github.io/master_villages/sample_maps.html). If you cannot find the idiom referenced in your source, please contact Samira. 
-See also [Idioms]().
+* **genlang_point** - for each language we need one general value which can be used to color datapoints for which we have no data. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to *yes* (one per language), and set everything else to *no*; see also [Philosophy - Current approach](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach)
+* **map** - in some cases there are multiple observations for one idiom. On the map we can show *only one value per datapoint*, so you can use this column to set information you want to see on the map to *yes* and everything else to *no*
 
-* **genlang_point** - for each language we need one general value which can be used to color datapoints for which we have no data. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to *yes* (one per language), and set everything else to *no*; see also [Philosophy - Current approach](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach).
-* **map** - in some cases there are multiple observations for one idiom. On the map we can show only one value per datapoint, so you can use this column to set information you want to see on the map to *yes* and everything else to *no*
-
+> One value = one row in the dataset. If you have multiple values for one idiom, create two rows for this idiom, each with a unique id.
 
 * **feature** - the name of your feature / chapter
 * **value** - the relevant values of the feature (e.g. attested / not attested)
 
-> Maps will be generated based on the **value** column. If you want to show the distribution of multiple parameters, please name your columns **value1**, **value2**, etc.
+> Maps are generated based on the **value** column. If you want to show the distribution of multiple parameters, please name your columns **value1**, **value2**, etc.
 
 * **source** - reference to the source you consulted (see [Literature references](#literature-references) below)
 * **page** - relevant page in the source
 * **comment** - in this column you can "pour out your soul" in the words of G.A. Moroz: add any kind of thought on an observation, its source, etc.
-* **contributor** - your name in English, so we know who did what and how to properly credit their work
+* **contributor** - your name in English, so we know how to properly credit your work
 
-* **form** - if your feature is [Affective Case](https://timtim1342.github.io/affective.html) for example, with a value attested / not attested, it might be informative to include the suffixes for different languages
+* **form** - if your feature is [Affective Case](https://timtim1342.github.io/affective.html) for example, which has the values attested / not attested, it might be informative to include the suffixes for different languages
 * **example_as_in_source** -  an example of how the form is used (if applicable)
 * **example** - example in Caucasiologist transcription with morpheme boundaries
 * **translation_as_in_source** - original translation of the example
@@ -94,15 +95,11 @@ For help transliterating Cyrillic orthography, see [this file](https://drive.goo
 
 # Literature references
 
-Our database of grammars, dictionaries, and other sources used so far can be found [here](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing).
+When you add a reference to your dataset, check if it is already listed in the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing). If yes, copy the `Bibtexkey` of the reference from the database to the **source** column in your table.
 
-And here is the [archive](https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing) where you can find these resources.
+(You can find our [library](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing) of descriptive sources here.)
 
-When you use a reference for your dataset, check if it is already in the [database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing). 
-
-If yes: copy the `Bibtexkey` of the reference from the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing) to the column **source** in your dataset. 
-
-In case you used multiple sources for one row / observation, separate the IDs with a semicolon (**;**), and do the same with the page numbers in the adjacent column. 
+In case you used multiple sources for one row / observation, separate the keys with a semicolon (**;**), and do the same with the page numbers in the adjacent column. 
 
 If you refer to multiple page ranges from one source, separate them with a comma. 
 
@@ -114,14 +111,13 @@ If the entire source was relevant, for example because it was a paper devoted to
 
 In the example above, pages 221 and 234-239 from `khalilova2009` have relevant information about the feature, while the paper `khalilova2011` was consulted/is relevant in its entirety.
 
-
 ## Adding new literature
 
 If the source is not in the database yet, you will have to add it. 
 
 The literature database is essentially a list of references in [bibtex](https://en.wikipedia.org/wiki/BibTeX) format. The category of the resource (book, paper, etc.) determines which columns are mandatory. You can see an overview of categories (entry types) and their arguments [here](https://www.bibtex.com/e/entry-types/).
 
-> Russian resources are listed in Cyrillics with a translation in English.
+> Russian resources are listed in Cyrillic script with a translation in English.
 
 The `Bibtexkey` is constructed as follows:
 
@@ -136,7 +132,6 @@ Be sure to complete the following steps when adding new sources:
 1. Assign a `Bibtexkey` to your source.
 2. Enter all the necessary information about the source in the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing).
 3. Upload a copy of the source to the [archive](https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing).
-
 
 
 # Help

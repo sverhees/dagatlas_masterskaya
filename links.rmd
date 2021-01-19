@@ -6,12 +6,13 @@ output:
     fig_cap: yes
     highlight: tango
     smooth_scroll: no
-    theme: cosmo
+    theme: flatly
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-* [Typological Atlas of the Languages of Daghestan](https://timtim1342.github.io)
+* [Typological Atlas of the Languages of Daghestan](http://lingconlab.ru/dagatlas/)
+
 
