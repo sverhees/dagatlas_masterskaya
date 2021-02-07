@@ -21,13 +21,14 @@ To create a dataset you will need the following things:
 
 * Access to our [archive](https://drive.google.com/drive/folders/1qN3TpzX-wTxiX2ZX0ZNJ6SledqzLHE5W)
 * A [dataset template](https://docs.google.com/spreadsheets/d/1ptIOqpr6PMLdMv0QOLShO_bvQMmYz_88q4My7rC9wY0/edit?usp=sharing)
-* Our [library]() of descriptive sources
-* Our [literature database]() with bibliographical information about the sources in the library
+* Our [library](https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD) of descriptive sources
+* Our [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing) with bibliographical information about the sources in the library
 
 Start by creating a folder for your feature in the archive, and upload your dataset there, even if it is still a work in progress: this makes it easier to discuss any problems or questions you might have.
 
 Feel free to browse the archive and look at examples of completed feature datasets, for example [Standard of comparison](https://docs.google.com/spreadsheets/d/1EO_EdjBMZb5wXVpF4-ps89tKCY3lZ0Dfo55HP_U6EXY/edit?usp=sharing).
 
+For a quick reference on how to collect data, see the [Step-by-step](file:///home/samira/Git/dagatlas_masterskaya/_site/steps.html) instructions. The instructions below go into more detail.
 
 # List of columns
 
@@ -37,9 +38,9 @@ Feel free to browse the archive and look at examples of completed feature datase
 * **idiom** - the name of a language variety; descriptive sources provide information on specific dialects or village varieties of languages, and we aim to be as precise as possible about where our information comes from; this also means that if a source says: "in dialect X, the same form is used", you can add this as an observation to your dataset
 * **type** - specifies whether the idiom is a village variety, a dialect spoken in multiple villages, or a standard language; please use our standard names and type classifications
 
-> For most sources in our archive, you can find the name and type of the idiom in [this table](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing). Alternatively, you can search for the name and type of a certain idiom in [this database](https://sverhees.github.io/master_villages/sample_maps.html). If you cannot find the idiom referenced in your source, please contact Samira.
+> For most sources in our archive, you can find the name and type of the idiom in [this table](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing). Alternatively, you can search for the name and type of a certain idiom in [this database](https://sverhees.github.io/master_villages/maps_new.html#dialects). If you cannot find the idiom referenced in your source, please contact Samira.
 
-* **genlang_point** - for each language we need one general value which can be used to color datapoints for which we have no data. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to *yes* (one per language), and set everything else to *no*; see also [Philosophy - Current approach](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach)
+* **genlang_point** - for each language we need one general value. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to *yes* (one per language), and set everything else to *no*; see also [Philosophy - Current approach](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach). The full list of languages (and a few additional recommended idioms) can be found [here](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#List_of_languages)
 * **map** - in some cases there are multiple observations for one idiom. On the map we can show *only one value per datapoint*, so you can use this column to set information you want to see on the map to *yes* and everything else to *no*
 
 > One value = one row in the dataset. If you have multiple values for one idiom, create two rows for this idiom, each with a unique id.
@@ -113,7 +114,7 @@ In the example above, pages 221 and 234-239 from `khalilova2009` have relevant i
 
 ## Adding new literature
 
-If the source is not in the database yet, you will have to add it. 
+If you use a source which is not in our database yet, you will have to add it. 
 
 The literature database is essentially a list of references in [bibtex](https://en.wikipedia.org/wiki/BibTeX) format. The category of the resource (book, paper, etc.) determines which columns are mandatory. You can see an overview of categories (entry types) and their arguments [here](https://www.bibtex.com/e/entry-types/).
 
@@ -130,9 +131,12 @@ In case there is already a different resource by the same author and from the sa
 Be sure to complete the following steps when adding new sources:
 
 1. Assign a `Bibtexkey` to your source.
-2. Enter all the necessary information about the source in the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing).
-3. Upload a copy of the source to the [archive](https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing).
+2. Enter all the necessary information about the source in the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing)
 
+> The **'author'** column should be filled as follows: last name, name and (if present) the first letter of the patronymic or second name, for example: *Абдуллаев, Сайгид Н*. If the source has more than one author use '*и*' or '*and*': *Абдуллаева, Айшат З. и Гаджиахмедов, Нурмагомед Э. и Кадыраджиев, Калсын С.* etc. If the source does not specify the full names, try to find them on the Internet rather than using initials.
+
+3. Do not forget the second tab, where you enter the type of source and the idioms it covers.
+4. Upload a copy of the source to the [archive](https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing), using the following filename convention: <br> `bibtexkey`_**title**, e.g.: *abdullaev1954_Грамматика даргинского языка*.
 
 # Help
 

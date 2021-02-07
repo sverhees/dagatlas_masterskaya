@@ -1,0 +1,15 @@
+id	village	lat	lon	lang	default_level	toplevel_dialect	village_dialect	republic
+1	Kvankhidatli	42.65789	46.271742	Andi		Lower Andi	Kvankhidatli	Dagestan
+2	Muni	42.680242	46.308874	Andi		Lower Andi	Muni	Dagestan
+3	Mekheturi	42.70556	46.2375	Andi	Andi	NA	NA	Dagestan
+4	Shivor	42.714662	46.256637	Andi	Andi	NA	NA	Dagestan
+5	Rushukha	42.71509	46.28112	Andi	Andi	NA	NA	Dagestan
+6	Chanko	42.717936	46.246417	Andi		Upper Andi	Chanko	Dagestan
+7	Khando	42.72694	46.23361	Andi	Andi	NA	NA	Dagestan
+8	Zilo	42.731394	46.319223	Andi		Upper Andi	Zilo	Dagestan
+9	Tsibilta	42.74322	46.24311	Andi	Andi	NA	NA	Dagestan
+10	Ashali	42.76963	46.30878	Andi		Upper Andi	Ashali	Dagestan
+11	Rikvani	42.782304	46.319372	Andi		Upper Andi	Rikvani	Dagestan
+12	Andi	42.7856	46.2639	Andi		Upper Andi	Andi	Dagestan
+13	Gunkha	42.78968	46.28275	Andi		Upper Andi	Gunkha	Dagestan
+14	Gagatli	42.800361	46.292645	Andi		Upper Andi	Gagatli	Dagestan

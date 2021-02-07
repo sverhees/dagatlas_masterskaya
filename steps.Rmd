@@ -1,0 +1,56 @@
+---
+title: "Step by step instruction"
+output:
+  html_document:
+    fig_cap: yes
+    highlight: tango
+    smooth_scroll: no
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+On this page you can find information about what to do after choosing a feature and how to adjust your data according to the TALD format. 
+
+## Step 1 - Create a folder
+
+Make a folder for your feature in [the archive](https://drive.google.com/drive/u/2/folders/1Rrm0NOH2E7dGMC97TdCFhjg7Y_FrAU3i) and copy [the feature template](https://docs.google.com/spreadsheets/d/1ptIOqpr6PMLdMv0QOLShO_bvQMmYz_88q4My7rC9wY0/edit#gid=0) in it.
+
+## Step 2 - Add data
+
+For each language fill all required columns (about the meaning of the columns see [Feature datasets > List of columns](https://sverhees.github.io/dagatlas_masterskaya/datasets.html#list-of-columns)).
+ 
+* We collect data from descriptive literature, which you can find in [our library](https://drive.google.com/drive/u/2/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD).
+  
+  + In our [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit#gid=1077173260) you can find information about the idioms represented in the sources (sheet **source type and idiom**, columns **idiom** and **type**).
+<br>
+<br>
+      
+* If you use a source that is not in the library yet:
+
+  + Add information about the source to the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit) (see [Feature datasets > Adding new literature](https://sverhees.github.io/dagatlas_masterskaya/datasets.html#Adding_new_literature)). Do not forget to add the source under both tabs!
+      
+  + When you fill [the **idiom** column](https://docs.google.com/document/d/1UxcF_NxtyahVieVcmu7FIb7TchTiT5ZKoIu4xJvT8D4/edit#heading=h.69dtoqp4g73) on the sheet **source type and idiom**, add a screenshot with information about the source of the data under the language name in [the doc with screenshots](https://docs.google.com/document/d/1UxcF_NxtyahVieVcmu7FIb7TchTiT5ZKoIu4xJvT8D4/edit). Before the screenshot, write the `bibtexkey` from [the **main** tab](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit) (to make the search easier it should be in the Heading 2 format) and the page number. 
+      
+  + Upload the source to one of the folders in [the library](https://drive.google.com/drive/u/2/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD) depending on the source type (**grammars**, **grammar sketches**, **dictionaries** or **other**). Name the file with `bibtexkey` and **title** from [the **main** tab](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit), for example: *abdullaev1954_Грамматика даргинского языка*.
+      
+## Step 3 - Write a chapter
+
+Write an introductory chapter about your feature (see [Writing a chapter](https://sverhees.github.io/dagatlas_masterskaya/chapters.html) for more details about the structure and see an Rmarkdown cheatsheet [here](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)).
+
+* If you refer to any sources in your text, then copy [the reference template](https://docs.google.com/spreadsheets/d/1P7cQTkXiT6cmRJyZQpVjj-bVFmJpTq3VcMB8bxNPhjI/edit?usp=sharing) and write the references in it (see [Writing a chapter > Literature references](https://sverhees.github.io/dagatlas_masterskaya/chapters.html#Literature_references)).
+
+* If you use a glossed example in the text, use three non-alligned rows: **transcription**, **glosses** (with grammatical glosses in CAPS) and **translation**, like in (@one). It will be aligned after the upload to the site:
+
+  (@one) Standard Avar [@bokarev1949: 165]
+
+      *di-da-sa ɬik’-a-w qazaq du-je=gi šːʷ-ela-r=in*
+
+      I-SUO-EL good-ADJZ-M worker you.SG-DAT=ADD get-FUT-NEG=EMPH
+
+      'You will also not get a better farm worker than me.'
+
+## Step 4 - Check your files
+
+By the end of the work, your folder in [the archive](https://drive.google.com/drive/u/2/folders/1Rrm0NOH2E7dGMC97TdCFhjg7Y_FrAU3i) should have your text (in .Rmd format), the reference table for your text (.csv or .tsv) and your feature table.
+

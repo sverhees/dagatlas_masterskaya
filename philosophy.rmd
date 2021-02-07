@@ -357,7 +357,7 @@ Villages located in the northeastern part of Daghestan are not displayed in the 
 
 This area was settled only relatively recently, and is much more ethnically mixed than the rest of the area, as you can see [here](https://sverhees.github.io/master_villages/maps_new.html). 
 
-In addition, little to nothing is known about the varieties of the languages spoken there. In some cases we know the village of origin for most of its inhabitants (e.g. Novogagatli was founded by settlers from the Andi village Gagatli), but we do not know how well their dialect is preserved and to what extent their population is ethnically and linguistically homogeneous. Therefore, we decided to exclude this region from the visualizations in the atlas.
+In addition, little to nothing is known about the varieties of the languages spoken there. In some cases we know the village of origin for most of its inhabitants (e.g. Novogagatli was founded by settlers from the Andi village Gagatli), but we do not know how well their dialect is preserved and to what extent their population is ethnically and linguistically homogeneous. Therefore, we decided to exclude this region from the visualizations in the atlas for now.
 
 ---
 
@@ -422,13 +422,15 @@ Below is a list of the languages included in our sample, grouped by language fam
 
 Our sample contains only **Judeo-Tat**, which is spoken in the city of Derbent. 
 
-Within Daghestan, Muslim Tat was spoken in the villages Dzhalgan and Mitagi. It is unclear to what extent the language is preserved there: the villages are labeled as Azerbaijani speaking in our data, which could be due to erroneous self-identification or shift. 
+Within Daghestan, Muslim Tat was spoken in the villages Dzhalgan and Mitagi. It is unclear to what extent the language is preserved there: the villages are labeled as Azerbaijani-speaking in our data, which could be due to erroneous self-identification or shift. 
 
 Tat-speaking communities in Azerbaijan are currently not part of the sample because we lack their coordinates.</font color>
 
 **Kartvelian**
 
 * Georgian
+
+Georgian is spoken in the Qakh district of Azerbaijan, alongside Tsakhur and Azerbaijani. It is also an important neighboring language.
 
 **Turkic**
 

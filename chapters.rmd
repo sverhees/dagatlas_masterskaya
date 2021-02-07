@@ -60,7 +60,7 @@ Placing parantheses around the year and page only:
 
 References are cited using a `Bibtexkey`, same as in the [feature datasets](https://sverhees.github.io/dagatlas_masterskaya/datasets.html).
 
-For the chapter, you will have to compile your own list of references using this [table template](). 
+For the chapter, you will have to compile your own list of references using this [table template](https://docs.google.com/spreadsheets/d/1P7cQTkXiT6cmRJyZQpVjj-bVFmJpTq3VcMB8bxNPhjI/edit?usp=sharing). 
 
 The references should be in [bibtex](https://en.wikipedia.org/wiki/BibTeX) format. You can find a list of entry types and their arguments [here](https://www.bibtex.com/e/entry-types/). Our [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing) is an example of a table of references in [bibtex](https://en.wikipedia.org/wiki/BibTeX) format.
 
@@ -70,14 +70,13 @@ When you are done, upload the table with references to your feature folder. It w
 
 To create subheadings, lists, bold or italic text, see a [quick guide](https://www.markdownguide.org/basic-syntax) on Rmarkdown syntax.
 
-See Section [Literature references](#literature-references) above on how to cite sources in Rmarkdown.
+See [Literature references](#literature-references) above on how to cite sources in Rmarkdown.
 
 ## Examples
 
 Examples should contain the number of the example, followed by the name of the language and a reference to the source:
 
 ![](images/example.jpg)
-
-Add glosses to the example using regular CAPS, everything else will be formatted automatically.
+The example itself should consist of three *non-aligned* rows: transcription with morpheme boundaires, glosses, and translation. Add glosses to the example using regular CAPS, everything else will be formatted automatically.
 
 

@@ -11,7 +11,7 @@
 
 
 
-<title>Writing a chapter</title>
+<title>Introduction</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,9 +19,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 
 <style type="text/css">
@@ -243,69 +240,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -313,16 +247,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -372,80 +296,21 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Writing a chapter</h1>
+<h1 class="title toc-ignore">Introduction</h1>
 
 </div>
 
 
-<p>Each feature dataset is accompanied by an introductory chapter. You can browse the <a href="http://lingconlab.ru/dagatlas/features.html">Atlas</a> for some examples.</p>
-<p>Texts should ultimately be prepared in <code>Rmarkdown</code>. Feel free to write a draft in .doc format first if you find that more convenient, but keep in mind that you will have to convert it to .rmd later.</p>
-<div id="structure-of-the-text" class="section level1">
-<h1>Structure of the text</h1>
-<p>Below is a list of recommended sections and points to address in the text.</p>
-<div id="introduction" class="section level3">
-<h3>Introduction</h3>
-<ul>
-<li>Briefly explains what the feature is</li>
-<li>Gives a general characterization of how it is expressed in East Caucasian</li>
-<li>Gives a general characterization of how it is expressed cross-linguistically</li>
-<li>If applicable: describes how the classification in <a href="https://timtim1342.github.io/index.html">TALD</a> differs from <a href="http://wals.info">WALS</a> (e.g. our chapter on the <a href="http://lingconlab.ru/dagatlas/standard_of_comparison.html">Standard of Comparison</a> shows more sub-types of spatial comparatives)</li>
-<li>Describes the goal of the text / map in one sentence: “Our goal is to classify the languages of Daghestan according to the type of spatial form used to mark the standard of comparison.”</li>
-</ul>
-</div>
-<div id="results" class="section level3">
-<h3>Results</h3>
-<ul>
-<li>Summarizes the different types/values you discovered; types identified in the text should correspond to values shown on the map. If you want to fuse multiple types into one category, be sure to explain this decision in the text.</li>
-</ul>
-<blockquote>
-<p><strong>A hypothetical example:</strong><br />
-<a href="http://lingconlab.ru/dagatlas/standard_of_comparison.html">Comparative constructions</a> are usually based on spatial case forms, which consist of a localization and a directionality. Let’s say Chiara only cares about directionality, because differences in localization occur more rarely and do not show an interesting distribution. She can choose to create general categories based on directionality (e.g. essive and elative), and mention in her text that elative includes both super-elative and cont-elative forms.</p>
-</blockquote>
-<ul>
-<li>Provide examples</li>
-<li>Identify which types are more or less common</li>
-</ul>
-</div>
-<div id="distribution" class="section level3">
-<h3>Distribution</h3>
-<ul>
-<li>Does the distribution of different types show a genealogical and / or areal signal?</li>
-</ul>
-</div>
-</div>
-<div id="literature-references" class="section level1">
-<h1>Literature references</h1>
-<p>In-text references to literature use the following syntax:</p>
-<p><code>[@forker2018: 100]</code></p>
-<blockquote>
-<p>(Forker 2018: 100)</p>
-</blockquote>
-<p>Placing parantheses around the year and page only:</p>
-<p><code>According to Forker [-@forker2018: 100]</code></p>
-<blockquote>
-<p>According to Forker (2018: 100)</p>
-</blockquote>
-<p>References are cited using a <code>Bibtexkey</code>, same as in the <a href="https://sverhees.github.io/dagatlas_masterskaya/datasets.html">feature datasets</a>.</p>
-<p>For the chapter, you will have to compile your own list of references using this <a href="">table template</a>.</p>
-<p>The references should be in <a href="https://en.wikipedia.org/wiki/BibTeX">bibtex</a> format. You can find a list of entry types and their arguments <a href="https://www.bibtex.com/e/entry-types/">here</a>. Our <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a> is an example of a table of references in <a href="https://en.wikipedia.org/wiki/BibTeX">bibtex</a> format.</p>
-<p>When you are done, upload the table with references to your feature folder. It will be converted to a <code>.bib</code> file for the website automatically.</p>
-</div>
-<div id="formatting" class="section level1">
-<h1>Formatting</h1>
-<p>To create subheadings, lists, bold or italic text, see a <a href="https://www.markdownguide.org/basic-syntax">quick guide</a> on Rmarkdown syntax.</p>
-<p>See Section <a href="#literature-references">Literature references</a> above on how to cite sources in Rmarkdown.</p>
-<div id="examples" class="section level2">
-<h2>Examples</h2>
-<p>Examples should contain the number of the example, followed by the name of the language and a reference to the source:</p>
-<p><img src="images/example.jpg" /></p>
-<p>Add glosses to the example using regular CAPS, everything else will be formatted automatically.</p>
-</div>
-</div>
+<p>Updated: 2021-02-07</p>
+<p>Welcome to the Contributor Manual for the <a href="http://lingconlab.ru/dagatlas/">Typological Atlas of the Languages of Daghestan (TALD)</a>!</p>
+<p>Here you will find basic instructions for collecting a <a href="https://sverhees.github.io/dagatlas_masterskaya/datasets.html">feature dataset</a> for the Atlas, writing and formatting an accompanying <a href="https://sverhees.github.io/dagatlas_masterskaya/chapters.html">chapter</a>, and creating <a href="https://sverhees.github.io/dagatlas_masterskaya/maps.html">map visualizations</a>.</p>
+<p>The manual also introduces the underlying <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html">philosophy</a> of the project and the structure of the data.</p>
+<p>See the <a href="">step-by step</a> instructions for a short summary of the workflow.</p>
+<hr />
+<p>The workshop is currently coordinated by <a href="https://www.hse.ru/en/org/persons/224233250">Chiara Naccarato</a> and <a href="https://www.hse.ru/en/staff/samiraverhees">Samira Verhees</a>. <br> Do not hesitate to write to us if you have any questions!</p>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -478,32 +343,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
