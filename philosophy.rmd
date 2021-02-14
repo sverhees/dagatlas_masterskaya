@@ -371,10 +371,12 @@ Below is a list of the languages included in our sample, grouped by language fam
 
 * Akhvakh
 * Andi
+* Bagvalal
 * Botlikh
 * Chamalal
 * Godoberi
 * Karata
+* Tindi
 
 * Dargwa
   * Chirag

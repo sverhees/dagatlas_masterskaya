@@ -38,7 +38,8 @@ For a quick reference on how to collect data, see the [Step-by-step](file:///hom
 * **idiom** - the name of a language variety; descriptive sources provide information on specific dialects or village varieties of languages, and we aim to be as precise as possible about where our information comes from; this also means that if a source says: "in dialect X, the same form is used", you can add this as an observation to your dataset
 * **type** - specifies whether the idiom is a village variety, a dialect spoken in multiple villages, or a standard language; please use our standard names and type classifications
 
-> For most sources in our archive, you can find the name and type of the idiom in [this table](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing). Alternatively, you can search for the name and type of a certain idiom in [this database](https://sverhees.github.io/master_villages/maps_new.html#dialects). If you cannot find the idiom referenced in your source, please contact Samira.
+> For most sources in our archive, you can find the name and type of the idiom in [this table](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing). Alternatively, you can search for the name and type of a certain idiom in [this database](https://sverhees.github.io/master_villages/maps_new.html#dialects). 
+If you cannot find the idiom referenced in your source, please contact Samira.
 
 * **genlang_point** - for each language we need one general value. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to *yes* (one per language), and set everything else to *no*; see also [Philosophy - Current approach](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach). The full list of languages (and a few additional recommended idioms) can be found [here](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#List_of_languages)
 * **map** - in some cases there are multiple observations for one idiom. On the map we can show *only one value per datapoint*, so you can use this column to set information you want to see on the map to *yes* and everything else to *no*
@@ -46,9 +47,10 @@ For a quick reference on how to collect data, see the [Step-by-step](file:///hom
 > One value = one row in the dataset. If you have multiple values for one idiom, create two rows for this idiom, each with a unique id.
 
 * **feature** - the name of your feature / chapter
-* **value** - the relevant values of the feature (e.g. attested / not attested)
+* **value** - the relevant values of a specific parameter (e.g. attested / not attested)
+* **value_name** - the name of the parameter: the feature [Evidentiality in the tense system](http://lingconlab.ru/dagatlas/evidentiality_tense_map.html), for example, has two parameters: *Evidentiality as a meaning of the perfect* and *Evidentiality in the tense system*. The content of **value_name** will be used as the title for your map
 
-> Maps are generated based on the **value** column. If you want to show the distribution of multiple parameters, please name your columns **value1**, **value2**, etc.
+> Maps are generated based on the **value** column. If you want to show the distribution of multiple parameters, please name your columns **value1**, **value2**, etc., and accordingly: **value1_name**, **value2_name**. 
 
 * **source** - reference to the source you consulted (see [Literature references](#literature-references) below)
 * **page** - relevant page in the source
@@ -127,13 +129,14 @@ surname (Latin script, lower case letters) + year
 
 In case there is already a different resource by the same author and from the same year in the database, add a keyword *following* the year, e.g. `bokarev1949` / `bokarev1949avar`.
 
+**For unpublished sources** use the surname followed by the word draft, and the year in which the manuscript was produced or when it was expected to be published, for example `creisselsdraft2020'.
 
 Be sure to complete the following steps when adding new sources:
 
 1. Assign a `Bibtexkey` to your source.
 2. Enter all the necessary information about the source in the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing)
 
-> The **'author'** column should be filled as follows: last name, name and (if present) the first letter of the patronymic or second name, for example: *Абдуллаев, Сайгид Н*. If the source has more than one author use '*и*' or '*and*': *Абдуллаева, Айшат З. и Гаджиахмедов, Нурмагомед Э. и Кадыраджиев, Калсын С.* etc. If the source does not specify the full names, try to find them on the Internet rather than using initials.
+> The **'author'** column should be filled as follows: last name, name and (if present) the first letter of the patronymic or second name, for example: *Абдуллаев, Сайгид Н*. If the source has more than one author use *и* (in Russian) or *and* (in English): *Абдуллаева, Айшат З. и Гаджиахмедов, Нурмагомед Э. и Кадыраджиев, Калсын С.* etc. If the source does not specify the full names, try to find them on the Internet rather than using initials.
 
 3. Do not forget the second tab, where you enter the type of source and the idioms it covers.
 4. Upload a copy of the source to the [archive](https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing), using the following filename convention: <br> `bibtexkey`_**title**, e.g.: *abdullaev1954_Грамматика даргинского языка*.
