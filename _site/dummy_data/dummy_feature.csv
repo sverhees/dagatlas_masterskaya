@@ -1,7 +1,0 @@
-id	lang	idiom	type	genlang_point	map	feature	value	comment
-1	Andi	Andi	village	yes	yes	Number of noun classes	5	
-2	Andi	Rikvani	village	no	yes	Number of noun classes	6	
-3	Andi	Rikvani	village	no	no	Number of noun classes	5	E.g. a different source counts differently (Corbett calls 6th class in Rikvani an inquorate gender – not a real class like the others), but we think this should not be shown on the map.
-4	Andi	Zilo	village	no	yes	Number of noun classes	5	
-5	Andi	Lower Andi	toplevel dialect	no	yes	Number of noun classes	3	
-6	Andi	Upper Andi	toplevel dialect	no	yes	Number of noun classes	5	Added for experimental purposes :)
