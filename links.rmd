@@ -14,5 +14,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 * [Typological Atlas of the Languages of Daghestan](http://lingconlab.ru/dagatlas/)
-
+* [East Caucasian villages dataset](https://github.com/sverhees/master_villages)
+* [TALD Archive](https://drive.google.com/drive/folders/1qN3TpzX-wTxiX2ZX0ZNJ6SledqzLHE5W)
+* [TALD Library](https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD)
+* [TALD Literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing)
+* [TALD Github]() for creating issues
+* Contact [Chiara](https://www.hse.ru/en/org/persons/224233250) or [Samira](https://www.hse.ru/en/staff/samiraverhees)
+* [Linguistic Convergence Laboratory](https://ilcl.hse.ru/)
 

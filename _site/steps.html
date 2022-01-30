@@ -11,7 +11,7 @@
 
 
 
-<title>Writing a chapter</title>
+<title>Step by step instruction</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -355,6 +355,9 @@ div.tocify {
   <a href="maps.html">Map visualization</a>
 </li>
 <li>
+  <a href="trans.html">Transcription</a>
+</li>
+<li>
   <a href="steps.html">Step-by-step</a>
 </li>
 <li>
@@ -372,73 +375,47 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Writing a chapter</h1>
+<h1 class="title toc-ignore">Step by step instruction</h1>
 
 </div>
 
 
-<p>Each feature dataset is accompanied by an introductory chapter. You can browse the <a href="http://lingconlab.ru/dagatlas/features.html">Atlas</a> for some examples.</p>
-<p>Texts should ultimately be prepared in <code>Rmarkdown</code>. Feel free to write a draft in .doc format first if you find that more convenient, but keep in mind that you will have to convert it to .rmd later.</p>
-<div id="structure-of-the-text" class="section level1">
-<h1>Structure of the text</h1>
-<p>Below is a list of recommended sections and points to address in the text.</p>
-<div id="introduction" class="section level3">
-<h3>Introduction</h3>
+<p>On this page you can find a brief step-by-step instruction on how to collect data according to the TALD methodology.</p>
+<div id="step-1---create-a-folder" class="section level2">
+<h2>Step 1 - Create a folder</h2>
+<p>Make a folder for your feature in <a href="https://drive.google.com/drive/u/2/folders/1Rrm0NOH2E7dGMC97TdCFhjg7Y_FrAU3i">the archive</a> and copy <a href="https://docs.google.com/spreadsheets/d/1ptIOqpr6PMLdMv0QOLShO_bvQMmYz_88q4My7rC9wY0/edit#gid=0">the feature template</a> in it.</p>
+</div>
+<div id="step-2---add-data" class="section level2">
+<h2>Step 2 - Add data</h2>
+<p>Collect information for each language in the feature template. Fill all required columns (see <a href="https://sverhees.github.io/dagatlas_masterskaya/datasets.html#list-of-columns">Feature datasets &gt; List of columns</a> for an explanation of the column names).</p>
 <ul>
-<li>Briefly explains what the feature is</li>
-<li>Gives a general characterization of how it is expressed in East Caucasian</li>
-<li>Gives a general characterization of how it is expressed cross-linguistically</li>
-<li>If applicable: describes how the classification in <a href="https://timtim1342.github.io/index.html">TALD</a> differs from <a href="http://wals.info">WALS</a> (e.g. our chapter on the <a href="http://lingconlab.ru/dagatlas/standard_of_comparison.html">Standard of Comparison</a> shows more sub-types of spatial comparatives)</li>
-<li>Describes the goal of the text / map in one sentence: “Our goal is to classify the languages of Daghestan according to the type of spatial form used to mark the standard of comparison.”</li>
+<li><p>We collect data from descriptive literature, which you can find in <a href="https://drive.google.com/drive/u/2/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD">our library</a>.</p>
+<ul>
+<li>In our <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit#gid=1077173260">literature database</a> you can find bibliographical information about the source, as well as information on which idioms are represented in the sources (on the sheet <strong>source type and idiom</strong>, columns <strong>idiom</strong> and <strong>type</strong>). <br> <br></li>
+</ul></li>
+<li><p>If you want to use a source that is not in the library yet:</p>
+<ul>
+<li><p>Submit information about the source via <a href="https://docs.google.com/forms/d/e/1FAIpQLSfekbCiSi5TVtJDAWcAzIajkwYyoR8WjRJ1tjkt0QS6kdkIEA/viewform?usp=sf_link">this form</a>. Each source should be assigned a <strong>bibtexkey</strong> – a unique identifier that allows us to easily cite sources across the Atlas. See <a href="">Feature datasets &gt; Literature references &gt; Adding new literature</a> on how to construct a key. Be sure to check whether the key is already taken.</p></li>
+<li><p>Upload the source to the appropriate folder in <a href="https://drive.google.com/drive/u/2/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD">the library</a>. Use the <strong>bibtexkey</strong> as a filename.</p></li>
+</ul></li>
 </ul>
 </div>
-<div id="results" class="section level3">
-<h3>Results</h3>
+<div id="step-3---write-a-chapter" class="section level2">
+<h2>Step 3 - Write a chapter</h2>
+<p>Write an introductory chapter about your feature in <code>rmarkdown</code> using our <a href="https://github.com/sverhees/dagatlas_masterskaya/blob/main/chapter_template/chapter_template.Rmd">chapter template</a>. See <a href="https://sverhees.github.io/dagatlas_masterskaya/chapters.html">Writing a chapter</a> for more detailed guidelines.</p>
+</div>
+<div id="step-4---check-your-files" class="section level2">
+<h2>Step 4 - Check your files</h2>
+<p>By the end of the work, your folder in <a href="https://drive.google.com/drive/u/2/folders/1Rrm0NOH2E7dGMC97TdCFhjg7Y_FrAU3i">the archive</a> should contain the following things:</p>
 <ul>
-<li>Summarizes the different types/values you discovered; types identified in the text should correspond to values shown on the map. If you want to fuse multiple types into one category, be sure to explain this decision in the text.</li>
+<li>your feature table, with the name of your feature as filename</li>
+<li>your chapter text (in .rmd format; optionally a draft version in doc format)</li>
+<li>a table with references used in your text, filename: YOURFEATURE_references</li>
+<li>a copy of the <a href="https://docs.google.com/document/d/1tw-ty-pZglBhW8Ma3PfSit1migXc0vNX1AZE1BCyNio/edit?usp=sharing">TALD author agreement</a>, filled out and signed</li>
 </ul>
 <blockquote>
-<p><strong>A hypothetical example:</strong><br />
-<a href="http://lingconlab.ru/dagatlas/standard_of_comparison.html">Comparative constructions</a> are usually based on spatial case forms, which consist of a localization and a directionality. Let’s say Chiara only cares about directionality, because differences in localization occur more rarely and do not show an interesting distribution. She can choose to create general categories based on directionality (e.g. essive and elative), and mention in her text that elative includes both super-elative and cont-elative forms.</p>
+<p>Don’t forget to add the date on which you submit your finished work to us in the <strong>date</strong> column of your feature table!</p>
 </blockquote>
-<ul>
-<li>Provide examples</li>
-<li>Identify which types are more or less common</li>
-</ul>
-</div>
-<div id="distribution" class="section level3">
-<h3>Distribution</h3>
-<ul>
-<li>Does the distribution of different types show a genealogical and / or areal signal?</li>
-</ul>
-</div>
-</div>
-<div id="literature-references" class="section level1">
-<h1>Literature references</h1>
-<p>In-text references to literature use the following syntax:</p>
-<p><code>[@forker2018: 100]</code></p>
-<blockquote>
-<p>(Forker 2018: 100)</p>
-</blockquote>
-<p>Placing parantheses around the year and page only:</p>
-<p><code>According to Forker [-@forker2018: 100]</code></p>
-<blockquote>
-<p>According to Forker (2018: 100)</p>
-</blockquote>
-<p>References are cited using a <code>Bibtexkey</code>, same as in the <a href="https://sverhees.github.io/dagatlas_masterskaya/datasets.html">feature datasets</a>.</p>
-<p>For the chapter, you will have to compile your own list of references using this <a href="https://docs.google.com/spreadsheets/d/1P7cQTkXiT6cmRJyZQpVjj-bVFmJpTq3VcMB8bxNPhjI/edit?usp=sharing">table template</a>.</p>
-<p>The references should be in <a href="https://en.wikipedia.org/wiki/BibTeX">bibtex</a> format. You can find a list of entry types and their arguments <a href="https://www.bibtex.com/e/entry-types/">here</a>. Our <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a> is an example of a table of references in <a href="https://en.wikipedia.org/wiki/BibTeX">bibtex</a> format.</p>
-<p>When you are done, upload the table with references to your feature folder. It will be converted to a <code>.bib</code> file for the website automatically.</p>
-</div>
-<div id="formatting" class="section level1">
-<h1>Formatting</h1>
-<p>To create subheadings, lists, bold or italic text, see a <a href="https://www.markdownguide.org/basic-syntax">quick guide</a> on Rmarkdown syntax.</p>
-<p>See <a href="#literature-references">Literature references</a> above on how to cite sources in Rmarkdown.</p>
-<div id="examples" class="section level2">
-<h2>Examples</h2>
-<p>Examples should contain the number of the example, followed by the name of the language and a reference to the source:</p>
-<p><img src="images/example.jpg" /> The example itself should consist of three <em>non-aligned</em> rows: transcription with morpheme boundaires, glosses, and translation. Add glosses to the example using regular CAPS, everything else will be formatted automatically.</p>
-</div>
 </div>
 
 

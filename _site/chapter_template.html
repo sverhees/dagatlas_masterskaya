@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>chapter_template.utf8</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">TALD Contributor Manual</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="philosophy.html">Philosophy</a>
+</li>
+<li>
+  <a href="datasets.html">Feature datasets</a>
+</li>
+<li>
+  <a href="chapters.html">Writing a chapter</a>
+</li>
+<li>
+  <a href="maps.html">Map visualization</a>
+</li>
+<li>
+  <a href="trans.html">Transcription</a>
+</li>
+<li>
+  <a href="steps.html">Step-by-step</a>
+</li>
+<li>
+  <a href="links.html">Useful links</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="introduction" class="section level2">
+<h2>1. Introduction</h2>
+<div id="basic-syntax" class="section level3">
+<h3>Basic syntax</h3>
+<p><em>This</em> is how you get <em>cursive</em>, and <strong>this</strong> is how you get <strong>bold</strong> font. And this – is how you get an en-dash, for example, for page ranges.</p>
+<p>Here is a footnote.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> And another one.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
+<ul>
+<li>a</li>
+<li>list</li>
+<li>of</li>
+<li>points
+<ul>
+<li>with a subpoint</li>
+</ul></li>
+</ul>
+<p>Be sure to save the file with UTF-8 encoding, so that you can type IPA symbols like <em>ƛ</em>.</p>
+<p>You can find more tips <a href="https://www.markdownguide.org/basic-syntax">here</a>.</p>
+</div>
+<div id="literature-references" class="section level3">
+<h3>Literature references</h3>
+<p>For literature references in the text we use <strong>bibtexkeys</strong> like in the feature datasets. Only you have to create a <a href="https://sverhees.github.io/dagatlas_masterskaya/chapters.html#Literature_references">separate table</a> with the relevant references for your chapter, separate from the archive we use for datasets. The bibliography table sould be in the <code>.tsv</code> format and the name should be <code>NAME_OF_YOUR_FEATURE_bib.tsv</code>.</p>
+<p>You cite them using the following syntax:</p>
+<p>Some interesting information <span class="citation">(Harris 2002)</span>. Forker <span class="citation">(2018: 869–870)</span> mentions some interesting information.</p>
+<p>This will generate regular-looking citations and a list of references automatically.</p>
+</div>
+</div>
+<div id="results" class="section level2">
+<h2>2. Results</h2>
+<div id="a-nice-subsection" class="section level3">
+<h3>2.1 A nice subsection</h3>
+<p>In addition to the three mandatory sections, you can add as many chapter-specific subsections as you like.</p>
+</div>
+<div id="tables" class="section level3">
+<h3>Tables</h3>
+<p>Use <a href="https://www.tablesgenerator.com/markdown_tables">tables generator</a> to easily create tables in markdown syntax. You can copy a table directly from word. Look at <a href="#m1">Table 1</a>!</p>
+<div id="m1" class="section level4">
+<h4>Table 1. A table</h4>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>meaning 1</th>
+<th>meaning 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>lanuage 1</td>
+<td>-suffix</td>
+<td>-clitic</td>
+</tr>
+<tr class="even">
+<td>language 2</td>
+<td>-clitic</td>
+<td>-suffix</td>
+</tr>
+</tbody>
+</table>
+<p>You can also generate HTML if you have a more complex table (like <a href="#m2">Table 2</a>) with formatting and colors.</p>
+</div>
+<div id="m2" class="section level4">
+<h4>Table 2. A fancier table</h4>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-969i{background-color:#ffffc7;border-color:inherit;font-style:italic;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-ncd7{background-color:#ffffc7;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-xzy6{border-color:inherit;color:#6665cd;text-align:left;vertical-align:top}
+.tg .tg-f8tv{border-color:inherit;font-style:italic;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-0pky">
+</th>
+<th class="tg-fymr">
+meaning 1
+</th>
+<th class="tg-fymr">
+meaning 2
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-0pky">
+lanuage 1
+</td>
+<td class="tg-ncd7">
+-suffix
+</td>
+<td class="tg-969i">
+-clitic
+</td>
+</tr>
+<tr>
+<td class="tg-xzy6">
+language 2
+</td>
+<td class="tg-0pky">
+-clitic
+</td>
+<td class="tg-f8tv">
+-suffix
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="examples" class="section level3">
+<h3>Examples</h3>
+<p>For examples we use the <a href="https://agricolamz.github.io/lingglosses/">lingglosses</a> package.</p>
+<p>Format your example as shown below, but add <code>, echo=FALSE</code> following the <code>r</code> in the code-block in the <code>.Rmd</code> file, so that only your example shows and not your source code.</p>
+<pre class="r"><code>gloss_example(transliteration = &quot;bur-e-**ri** c&#39;in-ne-sːu&quot;,
+              glosses = &quot;fly-NPST-**INF** know-HAB-NEG&quot;,
+              free_translation = &quot;I cannot fly. (Zilo Andi, East Caucasian)&quot;,
+              comment = &quot;(lit. do not know how to)&quot;)</code></pre>
+<table class=" lightable-minimal" style='font-family: "Trebuchet MS", verdana, sans-serif; width: auto !important; border-bottom: 0;border-bottom: 0;'>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<em>bur-e-<strong>ri</strong></em>
+</td>
+<td style="text-align:left;">
+<em>c’in-ne-sːu</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fly-<span class="smallcaps">npst</span>-<span class="smallcaps"><strong>inf</strong></span>
+</td>
+<td style="text-align:left;">
+know-<span class="smallcaps">hab</span>-<span class="smallcaps">neg</span>
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> (lit. do not know how to)
+</td>
+</tr>
+</tfoot>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> ‘I cannot fly. (Zilo Andi, East Caucasian)’
+</td>
+</tr>
+</tfoot>
+</table>
+<p>You can also use it to cite glosses in text: <em>word=GLOSS</em> (meaning=<span class="smallcaps">gl</span>)</p>
+</div>
+</div>
+<div id="distribution" class="section level2">
+<h2>3. Distribution</h2>
+<p>Describe the distribution with links to the appropriate maps on the data and maps page. The number of the map corresponds to the number of the value, see <a href="">Map 1</a>. The URL will be added later (between the brackets).</p>
+</div>
+<div id="list-of-glosses" class="section level2">
+<h2>List of glosses</h2>
+<p>The list of glosses used in your chapter will be generated automatically by the following command from the <a href="https://agricolamz.github.io/lingglosses/">lingglosses</a> package.</p>
+<pre class="r"><code>make_gloss_list()</code></pre>
+<p><span class="smallcaps"><span style="background-color:#00d5ff;">gl</span></span> — ; <span class="smallcaps">hab</span> — habitual; <span class="smallcaps">neg</span> — negation; <span class="smallcaps">npst</span> — non-past</p>
+<p>The package cannot read your mind, however, so you have to check whether it interpreted your abbreviations correctly. In case you used a gloss that is not in the database (as I did with the fictional gloss GL), it will be marked in blue.</p>
+<p>If you want to add or correct glosses, you need to copy the generated list and adjust it manually:</p>
+<p><span class="smallcaps">gl</span> — fictional gloss; <span class="smallcaps">hab</span> — habitual; <span class="smallcaps">neg</span> — negation; <span class="smallcaps">npst</span> — non-past</p>
+<p>References are generated automatically if you provide a table with the references, as described <a href="">here</a>.</p>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>References</h2>
+<div id="refs" class="references">
+<div id="ref-forker2018">
+<p>Forker, Diana. 2018. “Gender Agreement Is Different.” <em>Linguistics</em>, no. 4: 865–94.</p>
+</div>
+<div id="ref-harris2002">
+<p>Harris, Alice C. 2002. <em>Endoclitics and the Origins of Udi Morphosyntax</em>. Oxford: Oxford University Press.</p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Oh, hi.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Oh, hi, again.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

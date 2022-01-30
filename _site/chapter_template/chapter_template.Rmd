@@ -1,0 +1,144 @@
+---
+output: html_document
+bibliography: chapter_template.bib
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(lingglosses)
+library(tidyverse)
+library(bib2df)
+
+# you need to provide the real name, not `chapter_template`
+file_name <- "chapter_template_bib.tsv"
+read_tsv(file_name, progress = FALSE) %>% 
+  df2bib(file_name %>% str_remove_all("[_\\.]tsv") %>%  str_replace("_bib$", "\\.bib"))
+```
+
+## 1. Introduction
+
+### Basic syntax
+
+*This* is how you get *cursive*, and **this** is how you get **bold** font.
+And this -- is how you get an en-dash, for example, for page ranges.
+
+Here is a footnote.[^my_footnote] And another one.[^another_one].
+
+[^my_footnote]: Oh, hi.
+[^another_one]: Oh, hi, again.
+
+- a
+- list
+* of
+* points
+  - with a subpoint
+
+Be sure to save the file with UTF-8 encoding, so that you can type IPA symbols like *ƛ*.
+
+You can find more tips [here](https://www.markdownguide.org/basic-syntax).
+
+### Literature references
+
+For literature references in the text we use **bibtexkeys** like in the feature datasets. Only you have to create a [separate table](https://sverhees.github.io/dagatlas_masterskaya/chapters.html#Literature_references) with the relevant references for your chapter, separate from the archive we use for datasets. The bibliography table sould be in the `.tsv` format and the name should be `NAME_OF_YOUR_FEATURE_bib.tsv`.
+
+You cite them using the following syntax: 
+
+Some interesting information [@harris2002].
+Forker [-@forker2018: 869--870] mentions some interesting information.
+
+This will generate regular-looking citations and a list of references automatically.
+
+## 2. Results
+
+### 2.1 A nice subsection
+
+In addition to the three mandatory sections, you can add as many chapter-specific subsections as you like.
+
+### Tables
+
+Use [tables generator](https://www.tablesgenerator.com/markdown_tables) to easily create tables in markdown syntax. You can copy a table directly from word. Look at [Table 1](#m1)!
+
+#### Table 1. A table {#m1}
+
+|            | meaning 1 | meaning 2 |
+|------------|-----------|-----------|
+| lanuage 1  | -suffix   | -clitic   |
+| language 2 | -clitic   | -suffix   |
+
+You can also generate HTML if you have a more complex table (like [Table 2](#m2)) with formatting and colors.
+
+#### Table 2. A fancier table {#m2}
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-969i{background-color:#ffffc7;border-color:inherit;font-style:italic;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-ncd7{background-color:#ffffc7;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-xzy6{border-color:inherit;color:#6665cd;text-align:left;vertical-align:top}
+.tg .tg-f8tv{border-color:inherit;font-style:italic;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-fymr">meaning 1</th>
+    <th class="tg-fymr">meaning 2</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">lanuage 1</td>
+    <td class="tg-ncd7">-suffix</td>
+    <td class="tg-969i">-clitic</td>
+  </tr>
+  <tr>
+    <td class="tg-xzy6">language 2</td>
+    <td class="tg-0pky">-clitic</td>
+    <td class="tg-f8tv">-suffix</td>
+  </tr>
+</tbody>
+</table>
+
+
+### Examples
+
+For examples we use the [lingglosses](https://agricolamz.github.io/lingglosses/) package.
+
+Format your example as shown below, but add `, echo=FALSE` following the `r` in the code-block in the `.Rmd` file, so that only your example shows and not your source code.
+              
+```{r}
+gloss_example(transliteration = "bur-e-**ri** c'in-ne-sːu",
+              glosses = "fly-NPST-**INF** know-HAB-NEG",
+              free_translation = "I cannot fly. (Zilo Andi, East Caucasian)",
+              comment = "(lit. do not know how to)")
+```
+
+You can also use it to cite glosses in text: `r gloss_example("word=GLOSS", "meaning=GL", intext = TRUE)`
+
+
+## 3. Distribution
+
+Describe the distribution with links to the appropriate maps on the data and maps page. The number of the map corresponds to the number of the value, see [Map 1](). The URL will be added later (between the brackets).
+
+## List of glosses
+
+The list of glosses used in your chapter will be generated automatically by the following command from the [lingglosses](https://agricolamz.github.io/lingglosses/) package.
+
+```{r}
+make_gloss_list()
+```
+
+The package cannot read your mind, however, so you have to check whether it interpreted your abbreviations correctly. In case you used a gloss that is not in the database (as I did with the fictional gloss GL), it will be marked in blue. 
+
+If you want to add or correct glosses, you need to copy the generated list and adjust it manually:
+
+`r add_gloss("GL")` — fictional gloss; `r add_gloss("HAB")` — habitual; `r add_gloss("NEG")` — negation; `r add_gloss("NPST")` — non-past
+
+References are generated automatically if you provide a table with the references, as described [here]().
+
+## References

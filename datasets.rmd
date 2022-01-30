@@ -26,7 +26,7 @@ To create a dataset you will need the following things:
 
 Start by creating a folder for your feature in the archive, and upload your dataset there, even if it is still a work in progress: this makes it easier to discuss any problems or questions you might have.
 
-Feel free to browse the archive and look at examples of completed feature datasets, for example [Standard of comparison](https://docs.google.com/spreadsheets/d/1EO_EdjBMZb5wXVpF4-ps89tKCY3lZ0Dfo55HP_U6EXY/edit?usp=sharing).
+You can see an example of a completed feature dataset [here](https://docs.google.com/spreadsheets/d/1Emf_uhLgwlLWkqmnCKOJKm2OyyIUt4weq_qqklc_sWo/edit?usp=sharing).
 
 For a quick reference on how to collect data, see the [Step-by-step](file:///home/samira/Git/dagatlas_masterskaya/_site/steps.html) instructions. The instructions below go into more detail.
 
@@ -38,71 +38,45 @@ For a quick reference on how to collect data, see the [Step-by-step](file:///hom
 * **idiom** - the name of a language variety; descriptive sources provide information on specific dialects or village varieties of languages, and we aim to be as precise as possible about where our information comes from; this also means that if a source says: "in dialect X, the same form is used", you can add this as an observation to your dataset
 * **type** - specifies whether the idiom is a village variety, a dialect spoken in multiple villages, or a standard language; please use our standard names and type classifications
 
-> For most sources in our archive, you can find the name and type of the idiom in [this table](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing). Alternatively, you can search for the name and type of a certain idiom in [this database](https://sverhees.github.io/master_villages/maps_new.html#dialects). 
+> For most sources in our archive, you can find the name and type of the idiom on the second sheet in the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing) > **source type and idiom**. Alternatively, you can search for the name and type of a certain idiom in [the East Caucasian villages dataset](https://sverhees.github.io/master_villages/maps_new.html#dialects). 
 If you cannot find the idiom referenced in your source, please contact Samira.
 
-* **genlang_point** - for each language we need one general value. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to *yes* (one per language), and set everything else to *no*; see also [Philosophy - Current approach](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach). The full list of languages (and a few additional recommended idioms) can be found [here](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#List_of_languages)
-* **map** - in some cases there are multiple observations for one idiom. On the map we can show *only one value per datapoint*, so you can use this column to set information you want to see on the map to *yes* and everything else to *no*
+* **genlang_point** - for our maps showing one datapoint per language we need to choose which datapoint (in case we have multiple points per language) is representative and will thus be showed on this map. For this purpose you need to set the appropriate row in this column to *yes* (no more than one per language), and set all other observations for the same language to *no*; see also [Philosophy - Current approach](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach). The full list of languages can be found [here](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#List_of_languages)
+* **map** - in some cases there are multiple observations for one idiom (e.g. one frequent suffix and more marginal one to express the same meaning). On the map we can show *only one value per datapoint*, so you can use this column to set information you want to see on the map to *yes* and everything else to *no*.
 
-> One value = one row in the dataset. If you have multiple values for one idiom, create two rows for this idiom, each with a unique id.
+> One value = one row in the dataset. If you have multiple values for one idiom, create two rows for this idiom, each with a unique id. General rule of thumb for the **genlang_point** column is 1 "yes" per language (the Dargwa varieties listed in [Language sample](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#The_language_sample) each count as a separate language), for **map** it is 1 "yes" per idiom.
 
 * **feature** - the name of your feature / chapter
-* **value** - the relevant values of a specific parameter (e.g. attested / not attested)
-* **value_name** - the name of the parameter: the feature [Evidentiality in the tense system](http://lingconlab.ru/dagatlas/evidentiality_tense_map.html), for example, has two parameters: *Evidentiality as a meaning of the perfect* and *Evidentiality in the tense system*. The content of **value_name** will be used as the title for your map
+* **value1** - the relevant values of a specific parameter (e.g. attested / not attested)
+* **value1_name** - the name of the parameter: the feature [Evidentiality in the tense system](http://lingconlab.ru/dagatlas/evidentiality_tense_map.html), for example, has two parameters: *Evidentiality as a meaning of the perfect* and *Evidentiality in the tense system*. The content of **value1_name** will be used as the title for your map
 
-> Maps are generated based on the **value** column. If you want to show the distribution of multiple parameters, please name your columns **value1**, **value2**, etc., and accordingly: **value1_name**, **value2_name**. 
+> Maps are generated based on the **value1** column. If you want to show the distribution of multiple parameters, please name further columns **value2**, **value3**, etc., and accordingly: **value1_name**, **value2_name**. 
 
 * **source** - reference to the source you consulted (see [Literature references](#literature-references) below)
 * **page** - relevant page in the source
-* **comment** - in this column you can "pour out your soul" in the words of G.A. Moroz: add any kind of thought on an observation, its source, etc.
+* **comment** - in this column you can "pour out your soul" in the words of G.A. Moroz: add any kind of thought on an observation or the source it appears in
 * **contributor** - your name in English, so we know how to properly credit your work
 
-* **form** - if your feature is [Affective Case](https://timtim1342.github.io/affective.html) for example, which has the values attested / not attested, it might be informative to include the suffixes for different languages
-* **example_as_in_source** -  an example of how the form is used (if applicable)
-* **example** - example in Caucasiologist transcription with morpheme boundaries
+* **form** - what the phoneme / morpheme / construction / lexeme looks like in [Caucasiologist transcription](https://sverhees.github.io/dagatlas_masterskaya/trans.html)
+* **example** - example of how the form is used (if applicable) in [Caucasiologist transcription](https://sverhees.github.io/dagatlas_masterskaya/trans.html) with morpheme boundaries
 * **translation_as_in_source** - original translation of the example
-* **translation** - your own English translation of the example
-* **gloss** - glosses for the example. Please follow the [Leipzig glossing rules](https://www.eva.mpg.de/lingua/pdf/Glossing-Rules.pdf) where possible. This includes unifying glosses from the original sources if necessary
-* **gloss_source** - glosses as in the original source, in case they are present
+* **translation** - optional: your own English translation of the example in case the source was in Russian or you dislike the original translation for some reason
+* **gloss** - glosses for the example. Please follow the [Leipzig glossing rules](https://www.eva.mpg.de/lingua/pdf/Glossing-Rules.pdf) where possible. This includes unifying glosses from the original sources if necessary. Format the non-lexical glosses in CAPS.
 * **example_source** - reference to the source of the example
 * **example_page** - page reference for the example
 * **example_comment** - any kind of comment you would like to add regarding the example
 
-# Transcription
-
-Please cite forms and examples as they are shown in the original sources, and add a Caucasiologist transcription in a separate column. Caucasiologist transcription diverges from IPA in the following cases:
-
-|IPA|Caucasus|
-|---|--------|
-|ʃ  |š       |
-|tʃ |č       |
-|tɬ |ƛ       |
-|ʐ  |ž       |
-
-Both gemination of consonants and lengthening of vowels are indicated with /ː/. Nasalization is indicated with a tilde, e.g. /ã/.
-
-If you lack certain symbols to render the original transcription, paste a screenshot into the table.
-
-For help transliterating Cyrillic orthography, see [this file](https://drive.google.com/file/d/19KGYuzTTaopf-2opXuaGfDVKiv3kqS2A/view?usp=sharing).
-
-
-# Examples
-
-1. Enter the example sentence/phrase/word as it is represented in the source (copy it or insert a screenshot) (**example_as_in_source**)
-2. Upload the screenshot as an image to a [separate folder](https://drive.google.com/drive/folders/10o1MoCECtCGhDcpTRmDH4nJRG1fwgkeH?usp=sharing) in your feature folder in the archive
-3. Add Caucasiologist transcription and insert morpheme boundaries (**example**)
-4. Enter the translation as in the source (**translation_as_in_source**)
-5. If applicable: enter the glosses from the source (**gloss_source**)
-6. Add an interlinear translation in English and glosses for your feature of interest. If you want to gloss the whole example, go ahead! :) (**gloss**)
-7. Add your own free translation to English if you want; if the source already contains an English translation, copy it here. (**translation**)
+* **date** - the date on which you submitted your table; edits of the table after its first publication on the website will receive a new date stamp accordingly
 
 # Literature references
 
-When you add a reference to your dataset, check if it is already listed in the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing). If yes, copy the `Bibtexkey` of the reference from the database to the **source** column in your table.
+When you add a reference to your dataset, check if it is already listed in the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing). If yes, copy the **bibtexkey** of the reference from the database to the **source** column in your table.
+
+> A **bibtexkey** is a unique identifier for a source which allows us to easily cite sources across the Atlas.
 
 (You can find our [library](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing) of descriptive sources here.)
 
-In case you used multiple sources for one row / observation, separate the keys with a semicolon (**;**), and do the same with the page numbers in the adjacent column. 
+In case you used multiple sources for one row / observation, separate the keys with a semicolon (**;**), and do the same with the page numbers in the adjacent column.
 
 If you refer to multiple page ranges from one source, separate them with a comma. 
 
@@ -116,33 +90,28 @@ In the example above, pages 221 and 234-239 from `khalilova2009` have relevant i
 
 ## Adding new literature
 
-If you use a source which is not in our database yet, you will have to add it. 
-
-The literature database is essentially a list of references in [bibtex](https://en.wikipedia.org/wiki/BibTeX) format. The category of the resource (book, paper, etc.) determines which columns are mandatory. You can see an overview of categories (entry types) and their arguments [here](https://www.bibtex.com/e/entry-types/).
+If you use a source which is not in our database yet, you will have to add it by submitting a [form](https://docs.google.com/forms/d/e/1FAIpQLSfekbCiSi5TVtJDAWcAzIajkwYyoR8WjRJ1tjkt0QS6kdkIEA/viewform?usp=sf_link) with the necessary information.
 
 > Russian resources are listed in Cyrillic script with a translation in English.
 
-The `Bibtexkey` is constructed as follows:
+The **bibtexkey** for a source is constructed as follows:
 
 `khalilova2009`  
 surname (Latin script, lower case letters) + year
 
-In case there is already a different resource by the same author and from the same year in the database, add a keyword *following* the year, e.g. `bokarev1949` / `bokarev1949avar`.
+If there are two authors, use both surnames, cf. Chumakina & Corbett (2008) becomes `chumakinacorbett2008`.
+For sources with more than two authors, write down only the surname of the first author followed by *et al*, e.g. `alekseevetal2008`.
+
+In case a different resource by the same author and from the same year is already present in the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing), add a keyword *following* the year, e.g. `bokarev1949` / `bokarev1949avar`.
 
 **For unpublished sources** use the surname followed by the word draft, and the year in which the manuscript was produced or when it was expected to be published, for example `creisselsdraft2020'.
 
-Be sure to complete the following steps when adding new sources:
+> The **'author'** field should be filled as follows: last name, name and (if present) the first letter of the patronymic or second name, for example: *Абдуллаев, Сайгид Н*. If the source has more than one author use *и* (in Russian) or *and* (in English): *Абдуллаева, Айшат З. и Гаджиахмедов, Нурмагомед Э. и Кадыраджиев, Калсын С.* etc. If the source does not specify the full names, try to find them on the Internet rather than using initials.
 
-1. Assign a `Bibtexkey` to your source.
-2. Enter all the necessary information about the source in the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing)
-
-> The **'author'** column should be filled as follows: last name, name and (if present) the first letter of the patronymic or second name, for example: *Абдуллаев, Сайгид Н*. If the source has more than one author use *и* (in Russian) or *and* (in English): *Абдуллаева, Айшат З. и Гаджиахмедов, Нурмагомед Э. и Кадыраджиев, Калсын С.* etc. If the source does not specify the full names, try to find them on the Internet rather than using initials.
-
-3. Do not forget the second tab, where you enter the type of source and the idioms it covers.
-4. Upload a copy of the source to the [archive](https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing), using the following filename convention: <br> `bibtexkey`_**title**, e.g.: *abdullaev1954_Грамматика даргинского языка*.
+Don't forget to upload a copy of the source to the appropriate folder in the  [library](https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing) using the **bibtexkey** as filename.
 
 # Help
 
-For any general questions about data collection or the archive, you can always contact Chiara or Samira.
+For any general questions about data collection or the library, you can always contact Chiara or Samira.
 
 If you have a more specific question about your feature, please also contact us, and we will connect you with an expert consultant for your feature.

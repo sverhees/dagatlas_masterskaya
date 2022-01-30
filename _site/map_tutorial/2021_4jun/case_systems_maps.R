@@ -177,6 +177,8 @@ map.feature(lang.gltc(all_genpoints$gltc),
 # General datapoints (feature only) ---------------------------------------
 
 map.feature(lang.gltc(all_genpoints$gltc),
+            latitude = all_genpoints$lat,
+            longitude = all_genpoints$lon,
             features = as.factor(all_genpoints$value2),
             title = unique(all_genpoints$value2_name),
             color = "magma",

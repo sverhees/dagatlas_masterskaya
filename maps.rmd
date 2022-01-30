@@ -13,10 +13,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Maps in [TALD](http://lingconlab.ru/dagatlas/) are generated automatically based on the **value** column. <br>
+Maps in [TALD](http://lingconlab.ru/dagatlas/) are generated automatically based on the **value** columns. <br>
 As explained in [Feature datasets](https://sverhees.github.io/dagatlas_masterskaya/datasets.html), you can have multiple value columns in order to generate different maps. 
 
 If you want, you can experiment with map visualizations by yourself using the `lingtypology` package for R. <br>
 You can find a detailed tutorial for the package [here](https://ropensci.github.io/lingtypology/).
 
-The underlying code and data used for the maps in [TALD](http://lingconlab.ru/dagatlas/) can be viewed in the [Github repository](https://github.com/LingConLab/TALD).
+Tutorials for experimenting with TALD visualizations as well as the necessary metadata such as village coordinates can be found [here](https://github.com/sverhees/dagatlas_masterskaya/tree/main/map_tutorial).

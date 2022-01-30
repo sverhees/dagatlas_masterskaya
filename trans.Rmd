@@ -1,0 +1,23 @@
+
+---
+title: "Transcription"
+output:
+  html_document:
+    fig_cap: yes
+    highlight: tango
+    smooth_scroll: no
+    theme: flatly
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Some general principles for transcription:
+
+* nasalization is indicated with a tilde ~
+* gemination as well as long vowels are indicated with a lengthmark ː (triangles, not dots)
+* mostly IPA, but notable exceptions include: ʃ = š, ts = c, tʃ = č, tɬ, tɬ' = ƛ , ƛ'
+* [here](https://docs.google.com/spreadsheets/d/1KYV1yOettrVlsv2HFqpL_inoGCRmOyzmBoX10Ku4Oio/edit?usp=sharing) you can find a full table of phonemes attested in the languages of our sample, how to transcribe them (**Caucasiologist**), and how they are represented in different sources
+
+> You will notice that there are a few phonemes that lack a Caucasiologist transcription in the table. Please use IPA in these cases for now.

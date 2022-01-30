@@ -355,6 +355,9 @@ div.tocify {
   <a href="maps.html">Map visualization</a>
 </li>
 <li>
+  <a href="trans.html">Transcription</a>
+</li>
+<li>
   <a href="steps.html">Step-by-step</a>
 </li>
 <li>
@@ -386,7 +389,7 @@ div.tocify {
 <li>Our <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a> with bibliographical information about the sources in the library</li>
 </ul>
 <p>Start by creating a folder for your feature in the archive, and upload your dataset there, even if it is still a work in progress: this makes it easier to discuss any problems or questions you might have.</p>
-<p>Feel free to browse the archive and look at examples of completed feature datasets, for example <a href="https://docs.google.com/spreadsheets/d/1EO_EdjBMZb5wXVpF4-ps89tKCY3lZ0Dfo55HP_U6EXY/edit?usp=sharing">Standard of comparison</a>.</p>
+<p>You can see an example of a completed feature dataset <a href="https://docs.google.com/spreadsheets/d/1Emf_uhLgwlLWkqmnCKOJKm2OyyIUt4weq_qqklc_sWo/edit?usp=sharing">here</a>.</p>
 <p>For a quick reference on how to collect data, see the <a href="file:///home/samira/Git/dagatlas_masterskaya/_site/steps.html">Step-by-step</a> instructions. The instructions below go into more detail.</p>
 <div id="list-of-columns" class="section level1">
 <h1>List of columns</h1>
@@ -397,88 +400,45 @@ div.tocify {
 <li><p><strong>type</strong> - specifies whether the idiom is a village variety, a dialect spoken in multiple villages, or a standard language; please use our standard names and type classifications</p></li>
 </ul>
 <blockquote>
-<p>For most sources in our archive, you can find the name and type of the idiom in <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">this table</a>. Alternatively, you can search for the name and type of a certain idiom in <a href="https://sverhees.github.io/master_villages/maps_new.html#dialects">this database</a>. If you cannot find the idiom referenced in your source, please contact Samira.</p>
+<p>For most sources in our archive, you can find the name and type of the idiom on the second sheet in the <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a> &gt; <strong>source type and idiom</strong>. Alternatively, you can search for the name and type of a certain idiom in <a href="https://sverhees.github.io/master_villages/maps_new.html#dialects">the East Caucasian villages dataset</a>. If you cannot find the idiom referenced in your source, please contact Samira.</p>
 </blockquote>
 <ul>
-<li><strong>genlang_point</strong> - for each language we need one general value. If you have multiple idioms and sources for one language, select the most representative or reliable data and set it to <em>yes</em> (one per language), and set everything else to <em>no</em>; see also <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach">Philosophy - Current approach</a>. The full list of languages (and a few additional recommended idioms) can be found <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#List_of_languages">here</a></li>
-<li><strong>map</strong> - in some cases there are multiple observations for one idiom. On the map we can show <em>only one value per datapoint</em>, so you can use this column to set information you want to see on the map to <em>yes</em> and everything else to <em>no</em></li>
+<li><strong>genlang_point</strong> - for our maps showing one datapoint per language we need to choose which datapoint (in case we have multiple points per language) is representative and will thus be showed on this map. For this purpose you need to set the appropriate row in this column to <em>yes</em> (no more than one per language), and set all other observations for the same language to <em>no</em>; see also <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach">Philosophy - Current approach</a>. The full list of languages can be found <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#List_of_languages">here</a></li>
+<li><strong>map</strong> - in some cases there are multiple observations for one idiom (e.g. one frequent suffix and more marginal one to express the same meaning). On the map we can show <em>only one value per datapoint</em>, so you can use this column to set information you want to see on the map to <em>yes</em> and everything else to <em>no</em>.</li>
 </ul>
 <blockquote>
-<p>One value = one row in the dataset. If you have multiple values for one idiom, create two rows for this idiom, each with a unique id.</p>
+<p>One value = one row in the dataset. If you have multiple values for one idiom, create two rows for this idiom, each with a unique id. General rule of thumb for the <strong>genlang_point</strong> column is 1 “yes” per language (the Dargwa varieties listed in <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#The_language_sample">Language sample</a> each count as a separate language), for <strong>map</strong> it is 1 “yes” per idiom.</p>
 </blockquote>
 <ul>
 <li><strong>feature</strong> - the name of your feature / chapter</li>
-<li><strong>value</strong> - the relevant values of a specific parameter (e.g. attested / not attested)</li>
-<li><strong>value_name</strong> - the name of the parameter: the feature <a href="http://lingconlab.ru/dagatlas/evidentiality_tense_map.html">Evidentiality in the tense system</a>, for example, has two parameters: <em>Evidentiality as a meaning of the perfect</em> and <em>Evidentiality in the tense system</em>. The content of <strong>value_name</strong> will be used as the title for your map</li>
+<li><strong>value1</strong> - the relevant values of a specific parameter (e.g. attested / not attested)</li>
+<li><strong>value1_name</strong> - the name of the parameter: the feature <a href="http://lingconlab.ru/dagatlas/evidentiality_tense_map.html">Evidentiality in the tense system</a>, for example, has two parameters: <em>Evidentiality as a meaning of the perfect</em> and <em>Evidentiality in the tense system</em>. The content of <strong>value1_name</strong> will be used as the title for your map</li>
 </ul>
 <blockquote>
-<p>Maps are generated based on the <strong>value</strong> column. If you want to show the distribution of multiple parameters, please name your columns <strong>value1</strong>, <strong>value2</strong>, etc., and accordingly: <strong>value1_name</strong>, <strong>value2_name</strong>.</p>
+<p>Maps are generated based on the <strong>value1</strong> column. If you want to show the distribution of multiple parameters, please name further columns <strong>value2</strong>, <strong>value3</strong>, etc., and accordingly: <strong>value1_name</strong>, <strong>value2_name</strong>.</p>
 </blockquote>
 <ul>
 <li><strong>source</strong> - reference to the source you consulted (see <a href="#literature-references">Literature references</a> below)</li>
 <li><strong>page</strong> - relevant page in the source</li>
-<li><strong>comment</strong> - in this column you can “pour out your soul” in the words of G.A. Moroz: add any kind of thought on an observation, its source, etc.</li>
+<li><strong>comment</strong> - in this column you can “pour out your soul” in the words of G.A. Moroz: add any kind of thought on an observation or the source it appears in</li>
 <li><p><strong>contributor</strong> - your name in English, so we know how to properly credit your work</p></li>
-<li><strong>form</strong> - if your feature is <a href="https://timtim1342.github.io/affective.html">Affective Case</a> for example, which has the values attested / not attested, it might be informative to include the suffixes for different languages</li>
-<li><strong>example_as_in_source</strong> - an example of how the form is used (if applicable)</li>
-<li><strong>example</strong> - example in Caucasiologist transcription with morpheme boundaries</li>
+<li><strong>form</strong> - what the phoneme / morpheme / construction / lexeme looks like in <a href="https://sverhees.github.io/dagatlas_masterskaya/trans.html">Caucasiologist transcription</a></li>
+<li><strong>example</strong> - example of how the form is used (if applicable) in <a href="https://sverhees.github.io/dagatlas_masterskaya/trans.html">Caucasiologist transcription</a> with morpheme boundaries</li>
 <li><strong>translation_as_in_source</strong> - original translation of the example</li>
-<li><strong>translation</strong> - your own English translation of the example</li>
-<li><strong>gloss</strong> - glosses for the example. Please follow the <a href="https://www.eva.mpg.de/lingua/pdf/Glossing-Rules.pdf">Leipzig glossing rules</a> where possible. This includes unifying glosses from the original sources if necessary</li>
-<li><strong>gloss_source</strong> - glosses as in the original source, in case they are present</li>
+<li><strong>translation</strong> - optional: your own English translation of the example in case the source was in Russian or you dislike the original translation for some reason</li>
+<li><strong>gloss</strong> - glosses for the example. Please follow the <a href="https://www.eva.mpg.de/lingua/pdf/Glossing-Rules.pdf">Leipzig glossing rules</a> where possible. This includes unifying glosses from the original sources if necessary. Format the non-lexical glosses in CAPS.</li>
 <li><strong>example_source</strong> - reference to the source of the example</li>
 <li><strong>example_page</strong> - page reference for the example</li>
 <li><p><strong>example_comment</strong> - any kind of comment you would like to add regarding the example</p></li>
+<li><p><strong>date</strong> - the date on which you submitted your table; edits of the table after its first publication on the website will receive a new date stamp accordingly</p></li>
 </ul>
-</div>
-<div id="transcription" class="section level1">
-<h1>Transcription</h1>
-<p>Please cite forms and examples as they are shown in the original sources, and add a Caucasiologist transcription in a separate column. Caucasiologist transcription diverges from IPA in the following cases:</p>
-<table>
-<thead>
-<tr class="header">
-<th>IPA</th>
-<th>Caucasus</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>ʃ</td>
-<td>š</td>
-</tr>
-<tr class="even">
-<td>tʃ</td>
-<td>č</td>
-</tr>
-<tr class="odd">
-<td>tɬ</td>
-<td>ƛ</td>
-</tr>
-<tr class="even">
-<td>ʐ</td>
-<td>ž</td>
-</tr>
-</tbody>
-</table>
-<p>Both gemination of consonants and lengthening of vowels are indicated with /ː/. Nasalization is indicated with a tilde, e.g. /ã/.</p>
-<p>If you lack certain symbols to render the original transcription, paste a screenshot into the table.</p>
-<p>For help transliterating Cyrillic orthography, see <a href="https://drive.google.com/file/d/19KGYuzTTaopf-2opXuaGfDVKiv3kqS2A/view?usp=sharing">this file</a>.</p>
-</div>
-<div id="examples" class="section level1">
-<h1>Examples</h1>
-<ol style="list-style-type: decimal">
-<li>Enter the example sentence/phrase/word as it is represented in the source (copy it or insert a screenshot) (<strong>example_as_in_source</strong>)</li>
-<li>Upload the screenshot as an image to a <a href="https://drive.google.com/drive/folders/10o1MoCECtCGhDcpTRmDH4nJRG1fwgkeH?usp=sharing">separate folder</a> in your feature folder in the archive</li>
-<li>Add Caucasiologist transcription and insert morpheme boundaries (<strong>example</strong>)</li>
-<li>Enter the translation as in the source (<strong>translation_as_in_source</strong>)</li>
-<li>If applicable: enter the glosses from the source (<strong>gloss_source</strong>)</li>
-<li>Add an interlinear translation in English and glosses for your feature of interest. If you want to gloss the whole example, go ahead! :) (<strong>gloss</strong>)</li>
-<li>Add your own free translation to English if you want; if the source already contains an English translation, copy it here. (<strong>translation</strong>)</li>
-</ol>
 </div>
 <div id="literature-references" class="section level1">
 <h1>Literature references</h1>
-<p>When you add a reference to your dataset, check if it is already listed in the <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a>. If yes, copy the <code>Bibtexkey</code> of the reference from the database to the <strong>source</strong> column in your table.</p>
+<p>When you add a reference to your dataset, check if it is already listed in the <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a>. If yes, copy the <strong>bibtexkey</strong> of the reference from the database to the <strong>source</strong> column in your table.</p>
+<blockquote>
+<p>A <strong>bibtexkey</strong> is a unique identifier for a source which allows us to easily cite sources across the Atlas.</p>
+</blockquote>
 <p>(You can find our <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">library</a> of descriptive sources here.)</p>
 <p>In case you used multiple sources for one row / observation, separate the keys with a semicolon (<strong>;</strong>), and do the same with the page numbers in the adjacent column.</p>
 <p>If you refer to multiple page ranges from one source, separate them with a comma.</p>
@@ -500,33 +460,25 @@ div.tocify {
 <p>In the example above, pages 221 and 234-239 from <code>khalilova2009</code> have relevant information about the feature, while the paper <code>khalilova2011</code> was consulted/is relevant in its entirety.</p>
 <div id="adding-new-literature" class="section level2">
 <h2>Adding new literature</h2>
-<p>If you use a source which is not in our database yet, you will have to add it.</p>
-<p>The literature database is essentially a list of references in <a href="https://en.wikipedia.org/wiki/BibTeX">bibtex</a> format. The category of the resource (book, paper, etc.) determines which columns are mandatory. You can see an overview of categories (entry types) and their arguments <a href="https://www.bibtex.com/e/entry-types/">here</a>.</p>
+<p>If you use a source which is not in our database yet, you will have to add it by submitting a <a href="https://docs.google.com/forms/d/e/1FAIpQLSfekbCiSi5TVtJDAWcAzIajkwYyoR8WjRJ1tjkt0QS6kdkIEA/viewform?usp=sf_link">form</a> with the necessary information.</p>
 <blockquote>
 <p>Russian resources are listed in Cyrillic script with a translation in English.</p>
 </blockquote>
-<p>The <code>Bibtexkey</code> is constructed as follows:</p>
+<p>The <strong>bibtexkey</strong> for a source is constructed as follows:</p>
 <p><code>khalilova2009</code><br />
 surname (Latin script, lower case letters) + year</p>
-<p>In case there is already a different resource by the same author and from the same year in the database, add a keyword <em>following</em> the year, e.g. <code>bokarev1949</code> / <code>bokarev1949avar</code>.</p>
+<p>If there are two authors, use both surnames, cf. Chumakina &amp; Corbett (2008) becomes <code>chumakinacorbett2008</code>. For sources with more than two authors, write down only the surname of the first author followed by <em>et al</em>, e.g. <code>alekseevetal2008</code>.</p>
+<p>In case a different resource by the same author and from the same year is already present in the <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a>, add a keyword <em>following</em> the year, e.g. <code>bokarev1949</code> / <code>bokarev1949avar</code>.</p>
 <p><strong>For unpublished sources</strong> use the surname followed by the word draft, and the year in which the manuscript was produced or when it was expected to be published, for example `creisselsdraft2020’.</p>
-<p>Be sure to complete the following steps when adding new sources:</p>
-<ol style="list-style-type: decimal">
-<li>Assign a <code>Bibtexkey</code> to your source.</li>
-<li>Enter all the necessary information about the source in the <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a></li>
-</ol>
 <blockquote>
-<p>The <strong>‘author’</strong> column should be filled as follows: last name, name and (if present) the first letter of the patronymic or second name, for example: <em>Абдуллаев, Сайгид Н</em>. If the source has more than one author use <em>и</em> (in Russian) or <em>and</em> (in English): <em>Абдуллаева, Айшат З. и Гаджиахмедов, Нурмагомед Э. и Кадыраджиев, Калсын С.</em> etc. If the source does not specify the full names, try to find them on the Internet rather than using initials.</p>
+<p>The <strong>‘author’</strong> field should be filled as follows: last name, name and (if present) the first letter of the patronymic or second name, for example: <em>Абдуллаев, Сайгид Н</em>. If the source has more than one author use <em>и</em> (in Russian) or <em>and</em> (in English): <em>Абдуллаева, Айшат З. и Гаджиахмедов, Нурмагомед Э. и Кадыраджиев, Калсын С.</em> etc. If the source does not specify the full names, try to find them on the Internet rather than using initials.</p>
 </blockquote>
-<ol start="3" style="list-style-type: decimal">
-<li>Do not forget the second tab, where you enter the type of source and the idioms it covers.</li>
-<li>Upload a copy of the source to the <a href="https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing">archive</a>, using the following filename convention: <br> <code>bibtexkey</code>_<strong>title</strong>, e.g.: <em>abdullaev1954_Грамматика даргинского языка</em>.</li>
-</ol>
+<p>Don’t forget to upload a copy of the source to the appropriate folder in the <a href="https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing">library</a> using the <strong>bibtexkey</strong> as filename.</p>
 </div>
 </div>
 <div id="help" class="section level1">
 <h1>Help</h1>
-<p>For any general questions about data collection or the archive, you can always contact Chiara or Samira.</p>
+<p>For any general questions about data collection or the library, you can always contact Chiara or Samira.</p>
 <p>If you have a more specific question about your feature, please also contact us, and we will connect you with an expert consultant for your feature.</p>
 </div>
 

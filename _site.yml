@@ -13,6 +13,8 @@ navbar:
       href: chapters.html
     - text: "Map visualization"
       href: maps.html
+    - text: "Transcription"
+      href: trans.html
     - text: "Step-by-step"
       href: steps.html
     - text: "Useful links"

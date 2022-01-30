@@ -26,7 +26,7 @@ an accompanying [chapter](https://sverhees.github.io/dagatlas_masterskaya/chapte
 The manual also introduces the underlying [philosophy](https://sverhees.github.io/dagatlas_masterskaya/philosophy.html) of
 the project and the structure of the data.
 
-See the [step-by step]() instructions for a short summary of the workflow.
+See the [step-by step](https://sverhees.github.io/dagatlas_masterskaya/steps.html) instructions for a short summary of the workflow.
 
 ---
 

@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Each feature dataset is accompanied by an introductory chapter. You can browse the [Atlas](http://lingconlab.ru/dagatlas/features.html) for some examples. 
 
-Texts should ultimately be prepared in `Rmarkdown`. Feel free to write a draft in .doc format first if you find that more convenient, but keep in mind that you will have to convert it to .rmd later.
-
+It can be convenient to write a draft in a google doc in your feature folder, but ultimately the text will have to be formatted in `Rmarkdown`. You can download a template for formatting a chapter [here](https://github.com/sverhees/dagatlas_masterskaya/tree/main/chapter_template) or [here](https://drive.google.com/file/d/17QIK00DNzD5OoKNnlPoICryb9Ochj1X1/view?usp=sharing).
 
 # Structure of the text
 
@@ -46,37 +45,18 @@ Below is a list of recommended sections and points to address in the text.
 
 # Literature references
 
-In-text references to literature use the following syntax:
-
-`[@forker2018: 100]`
-
-> (Forker 2018: 100)
-
-Placing parantheses around the year and page only:
-
-`According to Forker [-@forker2018: 100]`
-
-> According to Forker (2018: 100)
-
-References are cited using a `Bibtexkey`, same as in the [feature datasets](https://sverhees.github.io/dagatlas_masterskaya/datasets.html).
-
-For the chapter, you will have to compile your own list of references using this [table template](https://docs.google.com/spreadsheets/d/1P7cQTkXiT6cmRJyZQpVjj-bVFmJpTq3VcMB8bxNPhjI/edit?usp=sharing). 
+For the chapter, you will have to compile your own list of references using this [table template](https://drive.google.com/file/d/17QIK00DNzD5OoKNnlPoICryb9Ochj1X1/view?usp=sharing). 
 
 The references should be in [bibtex](https://en.wikipedia.org/wiki/BibTeX) format. You can find a list of entry types and their arguments [here](https://www.bibtex.com/e/entry-types/). Our [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing) is an example of a table of references in [bibtex](https://en.wikipedia.org/wiki/BibTeX) format.
 
-When you are done, upload the table with references to your feature folder. It will be converted to a `.bib` file for the website automatically.
+In case you cite a source from our library in your chapter, all you have to do is copy the information from the [literature database](https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing) to your own table.
 
-# Formatting
+When you are done, upload the table with references to your feature folder using the following filenaming convention: name of your feature _references, e.g. **standardofcomparison_references**. 
 
-To create subheadings, lists, bold or italic text, see a [quick guide](https://www.markdownguide.org/basic-syntax) on Rmarkdown syntax.
+The table will be converted to a `.bib` file for the website automatically.
 
-See [Literature references](#literature-references) above on how to cite sources in Rmarkdown.
+# Pro-tip
 
-## Examples
+Avoid spending a lot of time on formatting examples and compiling lists of abbreviations and references in your google doc draft version. Ultimately you will have to format your text in `Rmarkdown`, which will do a lot of the more annoying work for you.
 
-Examples should contain the number of the example, followed by the name of the language and a reference to the source:
-
-![](images/example.jpg)
-The example itself should consist of three *non-aligned* rows: transcription with morpheme boundaires, glosses, and translation. Add glosses to the example using regular CAPS, everything else will be formatted automatically.
-
-
+Don't be scared if you are not very experienced with R: all you need to format a chapter is [R](https://www.r-project.org) + [RStudio](https://www.rstudio.com) and our [chapter template](https://github.com/sverhees/dagatlas_masterskaya/blob/main/chapter_template/chapter_template.Rmd).
