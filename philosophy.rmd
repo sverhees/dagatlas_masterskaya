@@ -409,11 +409,7 @@ Below is a list of the languages included in our sample, grouped by language fam
   * Mehweb
   * Tanty
  
-<font color = "dimgray">Dargwa is considered a single language with a number of highly divergent dialects by some, and a group of distinct but related languages by others. 
-
-Since the atlas is based on descriptive literature, 
-
-has long been considered a single language with a number of highly divergent dialects. The current consensus among linguists is to classify some of these former dialects as distinct languages belonging to a single Dargwa branch. In the atlas we include several Dargwa varieties for which documentation is available in our standard sample.</font color>   
+<font color = "dimgray">Dargwa is considered a single language with a number of highly divergent dialects by some, and a group of distinct but related languages by others. In our map visualizations which display one dot per language, several Dargwa varieties are shown, because they are sufficiently divergent. However, since our data comes from descriptive literature, we are unfortunately bound to some extent to the post 1930s view of Dargwa as a single language. In our [villages dataset](https://sverhees.github.io/master_villages/maps_new.html#dialects), for example, a variety like Mehweb forms part of the Northern Dargwa dialect group. We cannot rearrange this underlying tree-structure too drastically for practical reasons. </font color>   
 
 * **Lak**
   * Lak
