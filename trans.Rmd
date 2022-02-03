@@ -15,9 +15,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Some general principles for transcription:
 
-* nasalization is indicated with a tilde ~
-* gemination as well as long vowels are indicated with a lengthmark ː (triangles, not dots)
-* mostly IPA, but notable exceptions include: ʃ = š, ts = c, tʃ = č, tɬ, tɬ' = ƛ , ƛ'
-* [here](https://docs.google.com/spreadsheets/d/1KYV1yOettrVlsv2HFqpL_inoGCRmOyzmBoX10Ku4Oio/edit?usp=sharing) you can find a full table of phonemes attested in the languages of our sample, how to transcribe them (**Caucasiologist**), and how they are represented in different sources
-
-> You will notice that there are a few phonemes that lack a Caucasiologist transcription in the table. Please use IPA in these cases for now.
+* we mostly follow IPA conventions but with a few notable exceptions: 
+  * ts = c, ʃ = š, tʃ = č,  tɬ, tɬ' = ƛ , ƛ', dʒ = ǯ ,  ʒ = ž
+  * nasalization is indicated with a tilde (~) above the vowel: aⁿ >	ã
+  * except diphtongs, because they would require double tildes, which looks pretty afwul: ũ̃̃o (in the source code these are two vowels with a tilde above it side-by-side)
+  * gemination as well as long vowels are indicated with a lengthmark ː (triangles, not dots): чч > čː for consonants, ō > oː for vowels
+  
+* [here](https://docs.google.com/spreadsheets/d/1KYV1yOettrVlsv2HFqpL_inoGCRmOyzmBoX10Ku4Oio/edit?usp=sharing) is a table with all of the phonemes attested in the languages of our sample, transcribed in IPA (column **phoneme**); how to transcribe them for the atlas (column **TALD**), and how they are represented in different idioms and sources (all other columns). If you click on a column, you can view the bibtexkey of the source (in addition to the language and idiom). This also means that if you have the bibtexkey of a grammar, you can quickly find the corresponding phoneme and transcription.

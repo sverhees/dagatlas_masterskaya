@@ -42,8 +42,9 @@ By the end of the work, your folder in [the archive](https://drive.google.com/dr
 
 * your feature table, with the name of your feature as filename
 * your chapter text (in .rmd format; optionally a draft version in doc format)
-* a table with references used in your text, filename: YOURFEATURE_references
+* a table with references used in your text, filename: YOURFEATURE_bib
 * a copy of the [TALD author agreement](https://docs.google.com/document/d/1tw-ty-pZglBhW8Ma3PfSit1migXc0vNX1AZE1BCyNio/edit?usp=sharing), filled out and signed
+* **make sure the filenames of your feature table, text, and references are the same, e.g. evidentialtytense.xlsx (data), evidentialitytense.rmd (text), evidentialitytense_bib.xlsx (chapter references)** 
 
 > Don't forget to add the date on which you submit your finished work to us in the **date** column of your feature table!
 

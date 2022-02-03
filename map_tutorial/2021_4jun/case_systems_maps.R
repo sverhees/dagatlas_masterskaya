@@ -111,7 +111,7 @@ gencase_dargwa <- gencase_dargwa %>%
 gencase <- gencase %>%
   relocate(lang, .before = group)
 
-all_genpoints <- rbind(genopt, gencase_dargwa)
+all_genpoints <- rbind(gencase, gencase_dargwa)
 
 
 # Villages, languages and feature -----------------------------------------
@@ -179,8 +179,8 @@ map.feature(lang.gltc(all_genpoints$gltc),
 map.feature(lang.gltc(all_genpoints$gltc),
             latitude = all_genpoints$lat,
             longitude = all_genpoints$lon,
-            features = as.factor(all_genpoints$value2),
-            title = unique(all_genpoints$value2_name),
-            color = "magma",
+            features = all_genpoints$value3,
+            color = c("pink", "green"),
+            title = unique(all_genpoints$value3_name),
             label = all_genpoints$lang,
             zoom.control = T)

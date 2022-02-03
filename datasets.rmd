@@ -54,7 +54,7 @@ If you cannot find the idiom referenced in your source, please contact Samira.
 
 * **source** - reference to the source you consulted (see [Literature references](#literature-references) below)
 * **page** - relevant page in the source
-* **comment** - in this column you can "pour out your soul" in the words of G.A. Moroz: add any kind of thought on an observation or the source it appears in
+* **comment** - in this column you can "pour out your soul" in the words of G.A. Moroz: add any kind of thought on an observation or the source it appears in. Keep in mind, however, that anything you write here will be visible to users of the Atlas. So please write your comments in English, and make them clear and informative
 * **contributor** - your name in English, so we know how to properly credit your work
 
 * **form** - what the phoneme / morpheme / construction / lexeme looks like in [Caucasiologist transcription](https://sverhees.github.io/dagatlas_masterskaya/trans.html)
