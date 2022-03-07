@@ -11,7 +11,7 @@
 
 
 
-<title>Transcription</title>
+<title>Map visualization</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -270,22 +270,16 @@ $(document).ready(function () {
   <a href="philosophy.html">Philosophy</a>
 </li>
 <li>
-  <a href="datasets.html">Feature datasets</a>
+  <a href="datasets.html">Datasets</a>
 </li>
 <li>
-  <a href="chapters.html">Writing a chapter</a>
+  <a href="chapters.html">Chapters</a>
 </li>
 <li>
-  <a href="maps.html">Map visualization</a>
-</li>
-<li>
-  <a href="trans.html">Transcription</a>
+  <a href="maps.html">Maps</a>
 </li>
 <li>
   <a href="steps.html">Step-by-step</a>
-</li>
-<li>
-  <a href="links.html">Useful links</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -299,22 +293,14 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Transcription</h1>
+<h1 class="title toc-ignore">Map visualization</h1>
 
 </div>
 
 
-<p>Some general principles for transcription:</p>
-<ul>
-<li>we mostly follow IPA conventions but with a few notable exceptions:
-<ul>
-<li>ts = c, ʃ = š, tʃ = č, tɬ, tɬ’ = ƛ , ƛ’, dʒ = ǯ , ʒ = ž</li>
-<li>nasalization is indicated with a tilde (~) above the vowel: aⁿ &gt; ã</li>
-<li>except diphtongs, because they would require double tildes, which looks pretty afwul: ũ̃̃o (in the source code these are two vowels with a tilde above it side-by-side)</li>
-<li>gemination as well as long vowels are indicated with a lengthmark ː (triangles, not dots): чч &gt; čː for consonants, ō &gt; oː for vowels</li>
-</ul></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1KYV1yOettrVlsv2HFqpL_inoGCRmOyzmBoX10Ku4Oio/edit?usp=sharing">here</a> is a table with all of the phonemes attested in the languages of our sample, transcribed in IPA (column <strong>phoneme</strong>); how to transcribe them for the atlas (column <strong>TALD</strong>), and how they are represented in different idioms and sources (all other columns). If you click on a column, you can view the bibtexkey of the source (in addition to the language and idiom). This also means that if you have the bibtexkey of a grammar, you can quickly find the corresponding phoneme and transcription.</li>
-</ul>
+<p>Maps in <a href="http://lingconlab.ru/dagatlas/">TALD</a> are generated automatically based on the <strong>value</strong> columns. <br> As explained in <a href="https://sverhees.github.io/dagatlas_masterskaya/datasets.html">Feature datasets</a>, you can have multiple value columns in order to generate different maps.</p>
+<p>If you want, you can experiment with map visualizations by yourself using the <code>lingtypology</code> package for R. <br> You can find a detailed tutorial for the package <a href="https://ropensci.github.io/lingtypology/">here</a>.</p>
+<p>Tutorials for experimenting with TALD visualizations as well as the necessary metadata such as village coordinates can be found <a href="https://github.com/sverhees/dagatlas_masterskaya/tree/main/map_tutorial">here</a>.</p>
 
 
 

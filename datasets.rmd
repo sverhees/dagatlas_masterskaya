@@ -1,6 +1,6 @@
 
 ---
-title: "Feature datasets"
+title: "How to create a feature dataset"
 output:
   html_document:
     fig_cap: yes
@@ -109,6 +109,19 @@ In case a different resource by the same author and from the same year is alread
 > The **'author'** field should be filled as follows: last name, name and (if present) the first letter of the patronymic or second name, for example: *Абдуллаев, Сайгид Н*. If the source has more than one author use *и* (in Russian) or *and* (in English): *Абдуллаева, Айшат З. и Гаджиахмедов, Нурмагомед Э. и Кадыраджиев, Калсын С.* etc. If the source does not specify the full names, try to find them on the Internet rather than using initials.
 
 Don't forget to upload a copy of the source to the appropriate folder in the  [library](https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing) using the **bibtexkey** as filename.
+
+# Transcription
+
+Some general principles for transcription:
+
+* we mostly follow IPA conventions but with a few notable exceptions: 
+  * ts = c, ʃ = š, tʃ = č,  tɬ, tɬ' = ƛ , ƛ', dʒ = ǯ ,  ʒ = ž
+  * nasalization is indicated with a tilde (~) above the vowel: aⁿ >	ã
+  * except diphtongs, because they would require double tildes, which looks pretty afwul: ũ̃̃o (in the source code these are two vowels with a tilde above it side-by-side)
+  * gemination as well as long vowels are indicated with a lengthmark ː (triangles, not dots): чч > čː for consonants, ō > oː for vowels
+  
+* [here](https://docs.google.com/spreadsheets/d/1KYV1yOettrVlsv2HFqpL_inoGCRmOyzmBoX10Ku4Oio/edit?usp=sharing) is a table with all of the phonemes attested in the languages of our sample, transcribed in IPA (column **phoneme**); how to transcribe them for the atlas (column **TALD**), and how they are represented in different idioms and sources (all other columns). If you click on a column, you can view the bibtexkey of the source (in addition to the language and idiom). This also means that if you have the bibtexkey of a grammar, you can quickly find the corresponding phoneme and transcription.
+
 
 # Help
 

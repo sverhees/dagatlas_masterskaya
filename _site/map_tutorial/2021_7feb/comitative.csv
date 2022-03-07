@@ -1,0 +1,64 @@
+id	group/family	"gltc_lang
+"	lang	idiom	type	core	feature	value_for_map_1	value_for_map_2	value	value_detailed
+12	Lezgic	arch1244	Archi	Archib	village	yes	Comitative	case	comitative case  	case	comitative case
+6	Lezgic		Agul	Agul	idiom	yesno	Comitative			clausal expression (converb)	clausal expression (converb)
+54	Khinalug	"khin1240
+"	Khinalug	Khinalug	village	yes	Comitative	case	comitative case  	case	comitative case
+59	Lak	"lakk1252
+"	Lak	Standard Lak (Kumukh)	idiom	yes	Comitative	case	comitative case  	case	comitative case
+65	Lezgic	"rutu1240
+"	Rutul	Standard Rutul (Mukhad)	idiom	yes	Comitative	case	comitative case  	case	comitative case
+69	Lezgic	"tsak1249
+"	Tsakhur	Mishlesh	village	yes	Comitative	case	comitative case  	case	comitative case
+15	Armenic		Armenian	Modern Eastern Armenian	idiom	yesno	Comitative			clausal expression (postposition)	postposition
+18	Avar		Avar	Standard Avar	idiom	yesno	Comitative			clausal expression (postposition)	postposition
+23	Nakh		Bats	Bats	village	yes	Comitative	case	comitative case or instrumental case	case	comitative case
+29	Lezgic	budu1248	Budukh	Budukh	idiom	yes	Comitative	case	instrumental case	case	instrumental case
+32	Nakh	"chec1245
+"	Chechen		idiom	yes	Comitative	case	instrumental case	case	instrumental case
+49	Nakh	"ingu1240
+"	Ingush	Ingush	idiom	yes	Comitative	case	instrumental case	case	instrumental case
+22	Nakh		Bats	Bats	village	yesno	Comitative			case	instrumental case
+57	Lezgic	"kryt1240
+"	Kryz	Alik	village	yes	Comitative	case	instrumental case	case	instrumental case
+28	Andic		Botlikh	Botlikh	village	yesno	Comitative			clausal expression (postposition)	postposition
+25	Tsezic	bezh1248	Bezhta	Bezhta	village	yes	Comitative	case	spatial case	case  	spatial case
+44	Tsezic	"hinu1240
+"	Hinuq	Hinuq	idiom	yes	Comitative	case	spatial case	case	spatial case
+55	Tsezic	"khva1239
+"	Khwarshi	Kwantlada	village	yes	Comitative	case	spatial case	case	spatial case
+70	Tsezic	"dido1241
+"	Tsez	Kedero	village	yes	Comitative	case	spatial case	case	spatial case
+71	Lezgic	"udii1243
+"	Udi			yes	Comitative	case	spatial case	case	spatial case
+33	Dargwa		Dargwa	Standard Dargwa (Akusha)	idiom	yesno	Comitative			clausal expression (postposition)	postposition
+42	Andic		Godoberi	Godoberi	idiom	yesno	Comitative			clausal expression (postposition)	postposition
+34	Dargwa	"darg1241
+"	Dargwa	Standard Dargwa (Akusha)	idiom	yes	Comitative	case or postposition	comitative case or spatial case or postposition	case	comitative case
+14	Armenic	nucl1235	Armenian	Modern Eastern Armenian	idiom	yes	Comitative	case or postposition	instrumental case or postposition	case	instrumental case
+46	Tsezic		Hunzib	Hunzib	idiom	yesno	Comitative			case	spatial case
+3	Lezgic	aghu1253	Agul	Agul	idiom	yes	Comitative	converb	converb	clausal expression (converb)	clausal expression (converb)
+61	Lezgic	"lezg1247
+"	Lezgian	Standard Lezgian	idiom	yes	Comitative	converb	converb	clausal expression (converb)	clausal expression (converb)
+66	Lezgic	"taba1259
+"	Tabasaran	Tabasaran	idiom	yes	Comitative	converb	converb	clausal expression (converb)	clausal expression (converb)
+21	Andic	bagv1239	Bagvalal	Kvanada	village	yes	Comitative	particle	particle	clitic/particle	clitic/particle
+30	Andic	cham1309	Chamalal	Upper Gakvari	village	yes	Comitative	particle	particle	clitic/particle	clitic/particle
+52	Andic	"kara1474
+"	Karata	Karata	idiom	yes	Comitative	particle	particle	clitic/particle	clitic/particle
+47	Tsezic	hunz1247	Hunzib	Hunzib	idiom	yes	Comitative	particle or case	particle or spatial case	clitic/particle	clitic/particle
+16	Avar	avar1256	Avar	Standard Avar	idiom	yes	Comitative	particle or postposition	particle or postposition	clitic/particle	clitic/particle
+26	Andic	"botl1242
+"	Botlikh	Botlikh	village	yes	Comitative	particle or postposition	particle or postposition	clitic/particle	clitic/particle
+41	Andic	"ghod1238
+"	Godoberi	Godoberi	idiom	yes	Comitative	particle or postposition	particle or postposition	clitic/particle	clitic/particle
+8	Andic	"akhv1239
+"	Akhvakh	Tad-Magitl'	village	yes	Comitative	postposition	postposition	clausal expression (postposition)	postposition
+19	Turkic	nort2697	Azerbaijani	Standard Azerbaijani	idiom	yes	Comitative	postposition	postposition	clausal expression (postposition)	postposition
+58	Turkic	kumy1244	Kumyk	Standard Kumyk	idiom	yes	Comitative	postposition	postposition	clausal expression (postposition)	postposition
+64	Turkic	"noga1249
+"	Nogai		idiom	yes	Comitative	postposition	postposition	clausal expression (postposition)	postposition
+67	Andic	"tind1238
+"	Tindi	Tindi	idiom	yes	Comitative	postposition	postposition	clausal expression (postposition)	postposition
+11	Andic	"andi1255
+"	Andi			yes	Comitative	unknown	unknown	unknown	unknown

@@ -7,16 +7,12 @@ navbar:
       href: index.html
     - text: "Philosophy"
       href: philosophy.html
-    - text: "Feature datasets"
+    - text: "Datasets"
       href: datasets.html
-    - text: "Writing a chapter"
+    - text: "Chapters"
       href: chapters.html
-    - text: "Map visualization"
+    - text: "Maps"
       href: maps.html
-    - text: "Transcription"
-      href: trans.html
     - text: "Step-by-step"
       href: steps.html
-    - text: "Useful links"
-      href: links.html
 

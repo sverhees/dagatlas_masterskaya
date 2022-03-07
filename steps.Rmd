@@ -48,4 +48,18 @@ By the end of the work, your folder in [the archive](https://drive.google.com/dr
 
 > Don't forget to add the date on which you submit your finished work to us in the **date** column of your feature table!
 
+## Step 5 - Changes after publication
+
+What to do if you want to make changes to your data or chapter after it has been published?
+
+* make the changes in your dataset table, or in the latest version of your text
+* if possible, make changes to the text in the final rmd version
+* otherwise, make changes in the doc version, and clearly mark the changes with yellow
+* write a short description of the changes you made
+* alert Chiara or Samira about these changes and send them the description
+
+We will keep you updated about the publication of the new version.
+
+
+
 

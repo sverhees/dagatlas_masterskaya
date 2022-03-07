@@ -19,10 +19,9 @@ The idea of the [Typological Atlas of Daghestan](http://lingconlab.ru/dagatlas/)
 
 Although the language sample underlying [TALD](http://lingconlab.ru/dagatlas/) has grown to include a number of neighboring languages (more on that in [Language sample](#the-language-sample) below), the core of the project remains Daghestan.
 
-Our aim is to achieve maximum coverage of languages and dialects. Datasets on particular topics should be updatable, so that our map visualizations become incrementally more accurate.
+Our aim is to achieve maximum coverage of languages and dialects. Datasets on particular topics should be updatable, so that our map visualizations become incrementally more accurate. In order to make the resource updatable, contributors can choose to maintain the right to approve or reject any proposed updates or corrections, or they can choose to waive that right. Note that if you want to stay involved, this also entails a responsibility to review and reply to propositions within a certain time-frame.
 
 Data on linguistic features is collected primarily from descriptive literature; as a result, the Atlas can also be helpful in bibliographical research.
-
 
 # Datapoints
 

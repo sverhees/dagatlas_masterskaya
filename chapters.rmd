@@ -1,6 +1,6 @@
 
 ---
-title: "Writing a chapter"
+title: "How to write a chapter"
 output:
   html_document:
     fig_cap: yes
@@ -23,14 +23,14 @@ It can be convenient to write a draft in a google doc in your feature folder, bu
 
 Below is a list of recommended sections and points to address in the text.
 
-### Introduction
+### 1. Introduction
 - Briefly explains what the feature is
 - Gives a general characterization of how it is expressed in East Caucasian 
 - Gives a general characterization of how it is expressed cross-linguistically
 - If applicable: describes how the classification in [TALD](https://timtim1342.github.io/index.html) differs from [WALS](http://wals.info) (e.g. our chapter on the [Standard of Comparison](http://lingconlab.ru/dagatlas/standard_of_comparison.html) shows more sub-types of spatial comparatives)
 - Describes the goal of the text / map in one sentence: "Our goal is to classify the languages of Daghestan according to the type of spatial form used to mark the standard of comparison."
 
-### Results
+### 2. Results
 - Summarizes the different types/values you discovered; types identified in the text should correspond to values shown on the map. If you want to fuse multiple types into one category, be sure to explain this decision in the text. 
 
 >**A hypothetical example:**  
@@ -39,7 +39,7 @@ Below is a list of recommended sections and points to address in the text.
 - Provide examples
 - Identify which types are more or less common
 
-### Distribution
+### 3. Distribution
 
 - Does the distribution of different types show a genealogical and / or areal signal?
 
