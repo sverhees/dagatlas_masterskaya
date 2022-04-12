@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>How to create a feature dataset</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">TALD Contributor Manual</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="philosophy.html">Philosophy</a>
+</li>
+<li>
+  <a href="datasets.html">Datasets</a>
+</li>
+<li>
+  <a href="chapters.html">Chapters</a>
+</li>
+<li>
+  <a href="maps.html">Maps</a>
+</li>
+<li>
+  <a href="steps.html">Step-by-step</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">How to create a feature dataset</h1>
+
+</div>
+
+
+<p>Feature datasets for the Atlas are based on descriptive literature.</p>
+<p>To create a dataset you will need the following things:</p>
+<ul>
+<li>Access to our <a href="https://drive.google.com/drive/folders/1qN3TpzX-wTxiX2ZX0ZNJ6SledqzLHE5W">archive</a></li>
+<li>A <a href="https://docs.google.com/spreadsheets/d/1ptIOqpr6PMLdMv0QOLShO_bvQMmYz_88q4My7rC9wY0/edit?usp=sharing">dataset template</a></li>
+<li>Our <a href="https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD">library</a> of descriptive sources</li>
+<li>Our <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a> with bibliographical information about the sources in the library</li>
+</ul>
+<p>Start by creating a folder for your feature in the archive, and upload your dataset there, even if it is still a work in progress: this makes it easier to discuss any problems or questions you might have.</p>
+<p>You can see an example of a completed feature dataset <a href="https://docs.google.com/spreadsheets/d/1Emf_uhLgwlLWkqmnCKOJKm2OyyIUt4weq_qqklc_sWo/edit?usp=sharing">here</a>.</p>
+<p>For a quick reference on how to collect data, see the <a href="file:///home/samira/Git/dagatlas_masterskaya/_site/steps.html">Step-by-step</a> instructions. The instructions below go into more detail.</p>
+<div id="list-of-columns" class="section level1">
+<h1>List of columns</h1>
+<ul>
+<li><strong>id</strong> - unique number for each row = one observation in your dataset</li>
+<li><p><strong>lang</strong> - language name</p></li>
+<li><strong>idiom</strong> - the name of a language variety; descriptive sources provide information on specific dialects or village varieties of languages, and we aim to be as precise as possible about where our information comes from; this also means that if a source says: “in dialect X, the same form is used”, you can add this as an observation to your dataset</li>
+<li><p><strong>type</strong> - specifies whether the idiom is a village variety, a dialect spoken in multiple villages, or a standard language; please use our standard names and type classifications</p></li>
+</ul>
+<blockquote>
+<p>For most sources in our archive, you can find the name and type of the idiom on the second sheet in the <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a> &gt; <strong>source type and idiom</strong>. Alternatively, you can search for the name and type of a certain idiom in <a href="https://sverhees.github.io/master_villages/maps_new.html#dialects">the East Caucasian villages dataset</a>. If you cannot find the idiom referenced in your source, please contact Samira.</p>
+</blockquote>
+<ul>
+<li><strong>genlang_point</strong> - for our maps showing one datapoint per language we need to choose which datapoint (in case we have multiple points per language) is representative and will thus be showed on this map. For this purpose you need to set the appropriate row in this column to <em>yes</em> (no more than one per language), and set all other observations for the same language to <em>no</em>; see also <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#Current_approach">Philosophy - Current approach</a>. The full list of languages can be found <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#List_of_languages">here</a></li>
+<li><strong>map</strong> - in some cases there are multiple observations for one idiom (e.g. one frequent suffix and more marginal one to express the same meaning). On the map we can show <em>only one value per datapoint</em>, so you can use this column to set information you want to see on the map to <em>yes</em> and everything else to <em>no</em>.</li>
+</ul>
+<blockquote>
+<p>One value = one row in the dataset. If you have multiple values for one idiom, create two rows for this idiom, each with a unique id. General rule of thumb for the <strong>genlang_point</strong> column is 1 “yes” per language (the Dargwa varieties listed in <a href="https://sverhees.github.io/dagatlas_masterskaya/philosophy.html#The_language_sample">Language sample</a> each count as a separate language), for <strong>map</strong> it is 1 “yes” per idiom.</p>
+</blockquote>
+<ul>
+<li><strong>feature</strong> - the name of your feature / chapter</li>
+<li><strong>value1</strong> - the relevant values of a specific parameter (e.g. attested / not attested)</li>
+<li><strong>value1_name</strong> - the name of the parameter: the feature <a href="http://lingconlab.ru/dagatlas/evidentiality_tense_map.html">Evidentiality in the tense system</a>, for example, has two parameters: <em>Evidentiality as a meaning of the perfect</em> and <em>Evidentiality in the tense system</em>. The content of <strong>value1_name</strong> will be used as the title for your map</li>
+</ul>
+<blockquote>
+<p>Maps are generated based on the <strong>value1</strong> column. If you want to show the distribution of multiple parameters, please name further columns <strong>value2</strong>, <strong>value3</strong>, etc., and accordingly: <strong>value1_name</strong>, <strong>value2_name</strong>.</p>
+</blockquote>
+<ul>
+<li><strong>source</strong> - reference to the source you consulted (see <a href="#literature-references">Literature references</a> below)</li>
+<li><strong>page</strong> - relevant page in the source</li>
+<li><strong>comment</strong> - in this column you can “pour out your soul” in the words of G.A. Moroz: add any kind of thought on an observation or the source it appears in. Keep in mind, however, that anything you write here will be visible to users of the Atlas. So please write your comments in English, and make them clear and informative</li>
+<li><p><strong>contributor</strong> - your name in English, so we know how to properly credit your work</p></li>
+<li><strong>form</strong> - what the phoneme / morpheme / construction / lexeme looks like in <a href="https://sverhees.github.io/dagatlas_masterskaya/trans.html">Caucasiologist transcription</a></li>
+<li><strong>example</strong> - example of how the form is used (if applicable) in <a href="https://sverhees.github.io/dagatlas_masterskaya/trans.html">Caucasiologist transcription</a> with morpheme boundaries</li>
+<li><strong>translation_as_in_source</strong> - original translation of the example</li>
+<li><strong>translation</strong> - optional: your own English translation of the example in case the source was in Russian or you dislike the original translation for some reason</li>
+<li><strong>gloss</strong> - glosses for the example. Please follow the <a href="https://www.eva.mpg.de/lingua/pdf/Glossing-Rules.pdf">Leipzig glossing rules</a> where possible. This includes unifying glosses from the original sources if necessary. Format the non-lexical glosses in CAPS.</li>
+<li><strong>example_source</strong> - reference to the source of the example</li>
+<li><strong>example_page</strong> - page reference for the example</li>
+<li><p><strong>example_comment</strong> - any kind of comment you would like to add regarding the example</p></li>
+<li><p><strong>date</strong> - the date on which you submitted your table; edits of the table after its first publication on the website will receive a new date stamp accordingly</p></li>
+</ul>
+</div>
+<div id="literature-references" class="section level1">
+<h1>Literature references</h1>
+<p>When you add a reference to your dataset, check if it is already listed in the <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a>. If yes, copy the <strong>bibtexkey</strong> of the reference from the database to the <strong>source</strong> column in your table.</p>
+<blockquote>
+<p>A <strong>bibtexkey</strong> is a unique identifier for a source which allows us to easily cite sources across the Atlas.</p>
+</blockquote>
+<p>(You can find our <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">library</a> of descriptive sources here.)</p>
+<p>In case you used multiple sources for one row / observation, separate the keys with a semicolon (<strong>;</strong>), and do the same with the page numbers in the adjacent column.</p>
+<p>If you refer to multiple page ranges from one source, separate them with a comma.</p>
+<p>If the entire source was relevant, for example because it was a paper devoted to your topic, or because you read the whole grammar and the feature is not mentioned anywhere, indicate NA in the page column.</p>
+<table>
+<thead>
+<tr class="header">
+<th>source</th>
+<th>page</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>khalilova2009; khalilova2011</td>
+<td>221, 234–239; NA</td>
+</tr>
+</tbody>
+</table>
+<p>In the example above, pages 221 and 234-239 from <code>khalilova2009</code> have relevant information about the feature, while the paper <code>khalilova2011</code> was consulted/is relevant in its entirety.</p>
+<div id="adding-new-literature" class="section level2">
+<h2>Adding new literature</h2>
+<p>If you use a source which is not in our database yet, you will have to add it by submitting a <a href="https://docs.google.com/forms/d/e/1FAIpQLSfekbCiSi5TVtJDAWcAzIajkwYyoR8WjRJ1tjkt0QS6kdkIEA/viewform?usp=sf_link">form</a> with the necessary information.</p>
+<blockquote>
+<p>Russian resources are listed in Cyrillic script with a translation in English.</p>
+</blockquote>
+<p>The <strong>bibtexkey</strong> for a source is constructed as follows:</p>
+<p><code>khalilova2009</code><br />
+surname (Latin script, lower case letters) + year</p>
+<p>If there are two authors, use both surnames, cf. Chumakina &amp; Corbett (2008) becomes <code>chumakinacorbett2008</code>. For sources with more than two authors, write down only the surname of the first author followed by <em>et al</em>, e.g. <code>alekseevetal2008</code>.</p>
+<p>In case a different resource by the same author and from the same year is already present in the <a href="https://docs.google.com/spreadsheets/d/1XmOaGjd3ri6uA6yKBNobEfRqkPnsO3ljy_DssM2JrqM/edit?usp=sharing">literature database</a>, add a keyword <em>following</em> the year, e.g. <code>bokarev1949</code> / <code>bokarev1949avar</code>.</p>
+<p><strong>For unpublished sources</strong> use the surname followed by the word draft, and the year in which the manuscript was produced or when it was expected to be published, for example `creisselsdraft2020’.</p>
+<blockquote>
+<p>The <strong>‘author’</strong> field should be filled as follows: last name, name and (if present) the first letter of the patronymic or second name, for example: <em>Абдуллаев, Сайгид Н</em>. If the source has more than one author use <em>и</em> (in Russian) or <em>and</em> (in English): <em>Абдуллаева, Айшат З. и Гаджиахмедов, Нурмагомед Э. и Кадыраджиев, Калсын С.</em> etc. If the source does not specify the full names, try to find them on the Internet rather than using initials.</p>
+</blockquote>
+<p>Don’t forget to upload a copy of the source to the appropriate folder in the <a href="https://drive.google.com/drive/folders/14RBA31Cj1MsFSiV4E_ZqTLGOhI1dUfMD?usp=sharing">library</a> using the <strong>bibtexkey</strong> as filename.</p>
+</div>
+</div>
+<div id="transcription" class="section level1">
+<h1>Transcription</h1>
+<p>Some general principles for transcription:</p>
+<ul>
+<li>we mostly follow IPA conventions but with a few notable exceptions:
+<ul>
+<li>ts = c, ʃ = š, tʃ = č, tɬ, tɬ’ = ƛ , ƛ’, dʒ = ǯ , ʒ = ž</li>
+<li>nasalization is indicated with a tilde (~) above the vowel: aⁿ &gt; ã</li>
+<li>except diphtongs, because they would require double tildes, which looks pretty afwul: ũ̃̃o (in the source code these are two vowels with a tilde above it side-by-side)</li>
+<li>gemination as well as long vowels are indicated with a lengthmark ː (triangles, not dots): чч &gt; čː for consonants, ō &gt; oː for vowels</li>
+</ul></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1KYV1yOettrVlsv2HFqpL_inoGCRmOyzmBoX10Ku4Oio/edit?usp=sharing">here</a> is a table with all of the phonemes attested in the languages of our sample, transcribed in IPA (column <strong>phoneme</strong>); how to transcribe them for the atlas (column <strong>TALD</strong>), and how they are represented in different idioms and sources (all other columns). If you click on a column, you can view the bibtexkey of the source (in addition to the language and idiom). This also means that if you have the bibtexkey of a grammar, you can quickly find the corresponding phoneme and transcription.</li>
+</ul>
+</div>
+<div id="help" class="section level1">
+<h1>Help</h1>
+<p>For any general questions about data collection or the library, you can always contact Chiara or Samira.</p>
+<p>If you have a more specific question about your feature, please also contact us, and we will connect you with an expert consultant for your feature.</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
